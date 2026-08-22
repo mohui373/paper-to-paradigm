@@ -1,0 +1,55 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-test.txt
+
+      - name: Validate Skill collection
+        run: python scripts/validate_collection.py
+
+      - name: Audit E-Prime starter semantics
+        run: python skills/paper-reconstruction/scripts/audit_replication_bundle.py skills/paper-reconstruction/assets/eprime-starter
+
+      - name: Run semantic audit regression tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Compile Python scripts
+        run: >-
+          python -m py_compile
+          scripts/validate_collection.py
+          skills/paper-anatomy/scripts/prepare_paper.py
+          skills/paper-anatomy/scripts/validate_output.py
+          skills/paper-reconstruction/scripts/audit_replication_bundle.py
+          skills/paper-reconstruction/scripts/validate_platform_plan.py
+          skills/paper-reconstruction/scripts/validate_output.py
+          tests/fixtures/generate_synthetic_paper.py
+          tests/test_platform_plan.py
+          tests/test_prepare_paper.py
+
+      - name: Install CFF validator
+        run: python -m pip install --disable-pip-version-check cffconvert==2.0.0
+
+      - name: Validate citation metadata
+        run: cffconvert --validate -i CITATION.cff

@@ -1,0 +1,5 @@
+Procedure	Condition	TrialKind	Stimulus	CorrectAnswer	Weight	TrialIndex
+FormalTrialProc	formal_a	formal_a	LEFT	f	1	1
+FormalTrialProc	formal_b	formal_b	RIGHT	j	1	2
+FormalTrialProc	formal_a	formal_a	RIGHT	j	1	3
+FormalTrialProc	formal_b	formal_b	LEFT	f	1	4

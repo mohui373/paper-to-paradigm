@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper to Paradigm · 论文解剖"
+  short_description: "面向所有读者的 Paper anatomy，专长实验与行为研究"
+  default_prompt: "Use $paper-anatomy / 使用 $paper-anatomy 解剖这篇论文，定位 PDF 页码与图表，或核验传播主张是否符合原始研究证据。"
+
+policy:
+  allow_implicit_invocation: true

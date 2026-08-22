@@ -1,0 +1,55 @@
+{
+  "skill": "paper-anatomy",
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "full-paper-page-grounded",
+      "scenario": "完整论文",
+      "input": "提供可检索文字的完整 PDF，包含多个 Study、图和表，要求完整解剖。",
+      "expected": [
+        "先生成 source_bundle.json，并报告 page-grounded 定位模式",
+        "材料范围只把实际读取的文件标为已读取",
+        "B4、C1 与最终判断的实质性结论包含 PDF 页码",
+        "结论依赖图表时同时给 Figure 或 Table 编号",
+        "ABC 主体不被逐页清单替代"
+      ],
+      "must_not": ["使用未提供的补充材料", "只给章节名而不给页码", "把 source_bundle 全文复制进报告"]
+    },
+    {
+      "id": "abstract-only-source-limited",
+      "scenario": "摘要不足",
+      "input": "只提供摘要或数据库摘要页，要求判断操纵、测量细节和因果结论。",
+      "expected": [
+        "标记 source-limited",
+        "明确摘要能支持和不能支持的内容",
+        "将操纵、题项、排除与图表判断标为未能核实",
+        "说明需要全文哪些部分才能继续"
+      ],
+      "must_not": ["猜测 PDF 页码", "虚构样本或统计值", "把摘要措辞当作完整证据链"]
+    },
+    {
+      "id": "supplement-missing",
+      "scenario": "补充材料缺失",
+      "input": "提供主论文 PDF；正文引用 Supplement，但 Supplement 无法获取。",
+      "expected": [
+        "主论文仍按页码定位",
+        "把 Supplement 标为发现但未读取或受限",
+        "列明因此无法核实的材料、排除、分析或参数",
+        "结论强度随证据缺口调整"
+      ],
+      "must_not": ["声称已读取 Supplement", "用合理推断冒充补充材料原文"]
+    },
+    {
+      "id": "contradictory-evidence",
+      "scenario": "矛盾证据",
+      "input": "正文结果段、图注和表格对同一结果给出不一致方向或数值。",
+      "expected": [
+        "分别定位正文页、Figure/Table 编号及所在页",
+        "显式标记矛盾证据",
+        "区分作者结论、可直接读出的证据和本 Skill 判断",
+        "说明矛盾对理论解释和最终判断的影响"
+      ],
+      "must_not": ["静默选择其中一个版本", "把无法解决的冲突写成确定结论"]
+    }
+  ]
+}

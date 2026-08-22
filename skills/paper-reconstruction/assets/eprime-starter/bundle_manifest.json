@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "study_id": "eprime-structure-smoke",
+  "description": "A neutral E-Prime build starter for practice-then-formal flow and interleaved formal trials; it is not a paper case.",
+  "platform": {
+    "name": "E-Prime",
+    "target_version": "3.0",
+    "runtime_state": "buildable",
+    "runtime_artifacts": {}
+  },
+  "sources": [
+    {
+      "id": "replicator-design",
+      "type": "replication_decision",
+      "status": "复现建议",
+      "locator": "Local starter contract"
+    }
+  ],
+  "conditions": ["practice", "formal_a", "formal_b"],
+  "execution": {
+    "entry_procedure": "SessionProc",
+    "procedures": [
+      {
+        "name": "SessionProc",
+        "level": "session",
+        "called_by": null,
+        "timeline": ["Welcome", "PracticeList", "FormalBlockList", "Goodbye"]
+      },
+      {
+        "name": "PracticeTrialProc",
+        "level": "trial",
+        "called_by": "PracticeList",
+        "timeline": ["PracticeSetTrialIdentity", "PracticeFixation", "PracticeStimulus", "PracticeFeedback"]
+      },
+      {
+        "name": "BlockProc",
+        "level": "block",
+        "called_by": "FormalBlockList",
+        "timeline": ["BlockStart", "FormalTrialList", "BlockEnd"]
+      },
+      {
+        "name": "FormalTrialProc",
+        "level": "trial",
+        "called_by": "FormalTrialList",
+        "timeline": ["FormalSetTrialIdentity", "FormalFixation", "FormalStimulus", "FormalLogTrial"]
+      }
+    ],
+    "lists": [
+      {
+        "name": "PracticeList",
+        "order": "Sequential",
+        "relation_type": "serial-repeat",
+        "file": "lists/practice_list.tsv",
+        "rows": 2,
+        "calls": ["PracticeTrialProc"]
+      },
+      {
+        "name": "FormalBlockList",
+        "order": "Sequential",
+        "relation_type": "serial-repeat",
+        "file": "lists/formal_block_list.tsv",
+        "rows": 2,
+        "calls": ["BlockProc"]
+      },
+      {
+        "name": "FormalTrialList",
+        "order": "Random",
+        "relation_type": "interleaved-repeat",
+        "file": "lists/formal_trial_list.tsv",
+        "rows": 4,
+        "calls": ["FormalTrialProc"]
+      }
+    ],
+    "relations": [
+      {"from": "SessionProc", "to": "PracticeList", "type": "serial"},
+      {"from": "PracticeList", "to": "FormalBlockList", "type": "serial"},
+      {"from": "FormalBlockList", "to": "BlockProc", "type": "serial-repeat"},
+      {"from": "BlockProc", "to": "FormalTrialList", "type": "nested-repeat"},
+      {"from": "FormalTrialList", "to": "FormalTrialProc", "type": "interleaved-repeat"}
+    ]
+  },
+  "logging": {
+    "stable_id_fields": ["Subject", "Session", "StudyID", "BlockIndex", "TrialIndex", "TrialUID"]
+  },
+  "artifacts": {
+    "procedure_map": {"path": "procedure_map.csv", "source_ids": ["replicator-design"]},
+    "build_spec": {"path": "eprime_build_spec.json", "source_ids": ["replicator-design"]},
+    "event_log_schema": {"path": "event_log_schema.json", "source_ids": ["replicator-design"]},
+    "data_dictionary": {"path": "data_dictionary.csv", "source_ids": ["replicator-design"]},
+    "analysis_contract": {"path": "analysis_contract.json", "source_ids": ["replicator-design"]},
+    "set_trial_identity": {"path": "inline/set_trial_identity.ebs", "source_ids": ["replicator-design"]}
+  }
+}

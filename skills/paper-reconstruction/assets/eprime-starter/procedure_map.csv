@@ -1,0 +1,16 @@
+Procedure,Level,CalledBy,TimelineIndex,ObjectName,ObjectType,LogsData
+SessionProc,session,,1,Welcome,TextDisplay,no
+SessionProc,session,,2,PracticeList,List,no
+SessionProc,session,,3,FormalBlockList,List,no
+SessionProc,session,,4,Goodbye,TextDisplay,no
+PracticeTrialProc,trial,PracticeList,1,PracticeSetTrialIdentity,InLine,no
+PracticeTrialProc,trial,PracticeList,2,PracticeFixation,TextDisplay,no
+PracticeTrialProc,trial,PracticeList,3,PracticeStimulus,TextDisplay,yes
+PracticeTrialProc,trial,PracticeList,4,PracticeFeedback,FeedbackDisplay,yes
+BlockProc,block,FormalBlockList,1,BlockStart,InLine,no
+BlockProc,block,FormalBlockList,2,FormalTrialList,List,no
+BlockProc,block,FormalBlockList,3,BlockEnd,InLine,no
+FormalTrialProc,trial,FormalTrialList,1,FormalSetTrialIdentity,InLine,no
+FormalTrialProc,trial,FormalTrialList,2,FormalFixation,TextDisplay,no
+FormalTrialProc,trial,FormalTrialList,3,FormalStimulus,TextDisplay,yes
+FormalTrialProc,trial,FormalTrialList,4,FormalLogTrial,InLine,yes

@@ -1,0 +1,26 @@
+{
+  "target": "E-Prime 3.0 E-Studio",
+  "runtime_state_after_import": "buildable",
+  "steps": [
+    "Create a new experiment from the Blank template and save it under a new user-owned filename.",
+    "Set SessionProc timeline to Welcome, PracticeList, FormalBlockList, Goodbye.",
+    "Create PracticeTrialProc, BlockProc, and FormalTrialProc from procedure_map.csv.",
+    "Create each List as Embedded; import or paste its TSV rows and set Order from bundle_manifest.json.",
+    "Set every List Procedure column to the exact Proc name; do not place one Proc directly on another Proc timeline.",
+    "Paste inline/set_trial_identity.ebs into both SetTrialIdentity InLine objects.",
+    "Configure Stimulus objects to display [Stimulus], accept f/j, and score against [CorrectAnswer].",
+    "Enable procedure-level logging and confirm the fields in event_log_schema.json are present.",
+    "Generate the .ebs3 file, run a nonparticipant smoke session, export field names, and record hashes before changing runtime_state."
+  ],
+  "list_properties": {
+    "PracticeList": {"Order": "Sequential", "LoadMethod": "Embedded"},
+    "FormalBlockList": {"Order": "Sequential", "LoadMethod": "Embedded"},
+    "FormalTrialList": {"Order": "Random", "LoadMethod": "Embedded"}
+  },
+  "timing_placeholders_ms": {
+    "fixation": "<FROM_PAPER_OR_REPLICATOR_DECISION>",
+    "stimulus_duration": "<FROM_PAPER_OR_REPLICATOR_DECISION>",
+    "response_window": "<FROM_PAPER_OR_REPLICATOR_DECISION>"
+  },
+  "build_gate": "Do not replace timing placeholders or claim paper fidelity without a source-ledger entry."
+}

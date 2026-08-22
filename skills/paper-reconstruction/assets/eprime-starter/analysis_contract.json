@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "analysis_environment": {
+    "name": "platform-neutral",
+    "version": "unspecified",
+    "selection_source": "neutral-default"
+  },
+  "unit_of_analysis": "participant-by-condition after trial-level exclusions",
+  "required_fields": [
+    "Subject",
+    "Session",
+    "StudyID",
+    "BlockIndex",
+    "TrialIndex",
+    "TrialUID",
+    "Condition",
+    "TrialKind",
+    "FormalStimulus.RESP",
+    "FormalStimulus.ACC",
+    "FormalStimulus.RT",
+    "ExclusionFlag"
+  ],
+  "derived_fields": [
+    {
+      "name": "MeanRT",
+      "inputs": ["FormalStimulus.RT", "FormalStimulus.ACC", "ExclusionFlag", "Condition"],
+      "formula": "mean RT for correct, nonexcluded formal trials within participant and condition"
+    }
+  ],
+  "invariants": [
+    "TrialUID is unique within the dataset",
+    "Practice trials are excluded from the confirmatory model",
+    "Every formal participant has both formal_a and formal_b unless attrition is documented",
+    "Condition labels match the E-Prime List values exactly"
+  ]
+}

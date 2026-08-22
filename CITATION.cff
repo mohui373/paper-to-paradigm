@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use paper-to-paradigm in research or teaching, please cite this software collection."
+title: "paper-to-paradigm"
+type: software
+version: "0.1.0"
+authors:
+  - family-names: "Xuan"
+    given-names: "Bole"
+    alias: "宣博乐"
+    orcid: "https://orcid.org/0009-0004-9399-9489"
+abstract: "A bilingual Skill collection for source-grounded paper anatomy and paper reconstruction, with a specialty in experimental and behavioral research."
+license: Apache-2.0
+keywords:
+  - academic-reading
+  - behavioral-research
+  - experimental-design
+  - research-replication
+  - E-Prime
+  - open-science

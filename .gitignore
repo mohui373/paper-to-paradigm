@@ -1,0 +1,46 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python caches, test artifacts, and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Node dependencies and build outputs
+node_modules/
+dist/
+build/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated and temporary files
+tmp/
+outputs/
+source_bundle.json
+*.source_bundle.json
+rendered_pages/
+prepared_papers/
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig

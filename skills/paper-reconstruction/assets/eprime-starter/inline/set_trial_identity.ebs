@@ -1,0 +1,10 @@
+' Replicator-authored E-Basic starter. Paste into the SetTrialIdentity InLine.
+' Keep attribute names synchronized with event_log_schema.json and data_dictionary.csv.
+Dim trialUidValue As String
+
+c.SetAttrib "StudyID", "eprime-structure-smoke"
+trialUidValue = CStr(c.GetAttrib("Subject")) & "_" & _
+    CStr(c.GetAttrib("Session")) & "_" & _
+    CStr(c.GetAttrib("BlockIndex")) & "_" & _
+    CStr(c.GetAttrib("TrialIndex"))
+c.SetAttrib "TrialUID", trialUidValue

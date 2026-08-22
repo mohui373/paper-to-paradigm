@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "grain": "one row per trial",
+  "fields": [
+    {"name": "Subject", "type": "integer", "source_object": "Context"},
+    {"name": "Session", "type": "integer", "source_object": "Context"},
+    {"name": "StudyID", "type": "string", "source_object": "Context"},
+    {"name": "BlockIndex", "type": "integer", "source_object": "Context"},
+    {"name": "TrialIndex", "type": "integer", "source_object": "Context"},
+    {"name": "TrialUID", "type": "string", "source_object": "Context"},
+    {"name": "Condition", "type": "string", "source_object": "Context"},
+    {"name": "TrialKind", "type": "string", "source_object": "Context"},
+    {"name": "Stimulus", "type": "string", "source_object": "Context"},
+    {"name": "CorrectAnswer", "type": "string", "source_object": "Context"},
+    {"name": "FormalStimulus.RESP", "type": "string", "source_object": "FormalStimulus"},
+    {"name": "FormalStimulus.ACC", "type": "integer", "source_object": "FormalStimulus"},
+    {"name": "FormalStimulus.RT", "type": "integer", "source_object": "FormalStimulus"},
+    {"name": "ExclusionFlag", "type": "integer", "source_object": "Derived"}
+  ]
+}

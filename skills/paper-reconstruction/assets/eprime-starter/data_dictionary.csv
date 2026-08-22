@@ -1,0 +1,16 @@
+VariableName,ChineseMeaning,Type,AllowedValues,Origin,SourceObject,MissingRule
+Subject,被试编号,integer,positive integer,logged,Context,never missing
+Session,实验场次,integer,positive integer,logged,Context,never missing
+StudyID,研究标识,string,eprime-structure-smoke,logged,Context,never missing
+BlockIndex,区组序号,integer,0 or positive integer,logged,Context,never missing
+TrialIndex,试次序号,integer,positive integer,logged,Context,never missing
+TrialUID,稳定试次标识,string,Subject_Session_Block_Trial,logged,Context,never missing
+Condition,实验条件,string,practice|formal_a|formal_b,logged,Context,never missing
+TrialKind,试次类型,string,practice_a|practice_b|formal_a|formal_b|block,logged,Context,never missing
+Stimulus,呈现刺激,string,task-defined,logged,Context,missing only for block rows
+CorrectAnswer,正确反应,string,f|j|NA,logged,Context,missing only for block rows
+FormalStimulus.RESP,正式试次原始按键,string,f|j,logged,FormalStimulus,missing on timeout
+FormalStimulus.ACC,正式试次反应正确性,integer,0|1,logged,FormalStimulus,missing if no scorable response
+FormalStimulus.RT,正式试次反应时,integer,nonnegative milliseconds,logged,FormalStimulus,missing on timeout
+ExclusionFlag,排除标记,integer,0|1,derived,Derived,derive from preregistered rule
+MeanRT,条件内平均反应时,number,nonnegative milliseconds,derived,Derived,missing if all valid trials absent

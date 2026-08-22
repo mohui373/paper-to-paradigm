@@ -1,0 +1,152 @@
+{
+  "skill": "paper-reconstruction",
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "full-paper-open-materials",
+      "scenario": "完整论文",
+      "input": "提供论文 PDF、DOI、Supplement、OSF、数据与分析代码，要求全链路复现。",
+      "expected": [
+        "建立 A0 复现来源账本并逐项记录访问状态",
+        "区分概念、程序、材料、统计与直接复制层级",
+        "DOI、Supplement、OSF、数据、代码和材料连接到具体复现环节",
+        "B/C/D 的流程、日志、数据字典、模型与验证形成闭环"
+      ],
+      "must_not": ["把链接存在当作已读取", "忽略文件版本或许可", "把概念伪代码称为作者原程序"]
+    },
+    {
+      "id": "abstract-only-no-implementation",
+      "scenario": "摘要不足",
+      "input": "只提供摘要，要求完整复现实验程序。",
+      "expected": [
+        "将当前上限标为概念级",
+        "A0 记录全文、Supplement 和开放材料尚未获得",
+        "给出待获取材料与可先完成的结构工作",
+        "将关键参数保留为显式占位符"
+      ],
+      "must_not": ["虚构指导语、时序、随机化或排除规则", "承诺直接复制", "生成看似可运行但无证据的完整程序"]
+    },
+    {
+      "id": "supplement-missing-rebuild",
+      "scenario": "补充材料缺失",
+      "input": "正文可读且有 DOI，但文中所述 Supplement/附录链接不可访问。",
+      "expected": [
+        "A0 记录失效或受限链接与检查日期",
+        "区分可以从正文重建和必须自建的部分",
+        "为自建材料给出验证门槛与复现层级损失",
+        "把缺口写入 D1、D5 和行动顺序"
+      ],
+      "must_not": ["简单终止为无法复现", "把自建材料冒充作者材料", "省略链接状态"]
+    },
+    {
+      "id": "article-osf-conflict",
+      "scenario": "矛盾证据",
+      "input": "正文、Supplement 与 OSF 程序对条件编码、试次数或排除规则存在冲突。",
+      "expected": [
+        "A0 保留每个来源、版本和冲突值",
+        "说明冲突影响流程、数据字典和分析的具体位置",
+        "如需选择实现版本，标注选择依据与验证计划",
+        "在 D5 和行动顺序加入冲突消解测试"
+      ],
+      "must_not": ["静默覆盖某个版本", "把 OSF 默认视为最终版本", "输出单一确定参数而不标来源"]
+    },
+    {
+      "id": "eprime-proc-list-consistency",
+      "scenario": "E-Prime 语义一致性",
+      "input": "将练习阶段串联在正式阶段之前；正式阶段包含两类随机交错 Trial，并要求最终进入分析。",
+      "expected": [
+        "SessionProc、PracticeTrialProc、BlockProc 与 FormalTrialProc 职责分开",
+        "每个非根 Proc 都由声明的 List 调用",
+        "练习到正式标为 serial，正式 Trial 标为 interleaved-repeat，而不是模糊的并行",
+        "List 条件、Proc 对象、日志字段、数据字典和分析字段同名一致",
+        "未生成并运行 .es3/.ebs3 时状态不超过 buildable"
+      ],
+      "must_not": ["把 Proc 直接放入另一个 Proc 时间线", "把交错 Trial 称为真正并行", "缺少运行证据却声称 runtime-verified"]
+    },
+    {
+      "id": "explicit-psychopy-platform",
+      "scenario": "明确目标平台",
+      "input": "请复现这篇实验论文。我们实验室一直使用 PsychoPy，请输出可以沿该平台继续实现的端到端路径。",
+      "expected": [
+        "直接采用 PsychoPy 而不重复询问平台",
+        "记录原论文平台与研究者目标平台是两个独立字段",
+        "将被试流程映射为 Routine、Loop、Conditions、Component 和必要的 Code Component",
+        "把 PsychoPy 日志与数据文件连接到稳定 ID、数据字典和分析字段"
+      ],
+      "must_not": ["强制改用 E-Prime", "把 PsychoPy 组件错误写成 Proc/List", "因平台不同而改变论文证据"]
+    },
+    {
+      "id": "unspecified-platform-default",
+      "scenario": "未指定目标平台",
+      "input": "请依据这篇论文重组一个可以真正运行的计算机化行为实验，但我还没有说明使用什么实验软件。",
+      "expected": [
+        "先询问研究者或研究团队通常使用的平台并提供常见选项",
+        "问题只询问一次且不把平台选择归给被试",
+        "未回答或无偏好时继续采用 E-Prime 3.0",
+        "把 E-Prime 3.0 标成默认假设而不是论文事实",
+        "要求第一份 runtime-verified 案例对应明确论文与运行证据"
+      ],
+      "must_not": ["无限等待平台答复", "默认平台却不披露假设", "把中性 starter 当成论文案例"]
+    },
+    {
+      "id": "longitudinal-survey-neutral-platform",
+      "scenario": "纵向问卷平台适配",
+      "input": "请重建一项三波员工问卷研究；我还没有确定使用哪个问卷平台。",
+      "expected": [
+        "询问一次研究团队使用的问卷平台而不是实验程序",
+        "未回答时保持平台中立且不默认 E-Prime",
+        "输出波次时间窗、匿名 participant key、邀请提醒、完成/失访状态和跨波版本差异",
+        "数据契约包含 participant_key、wave_id、item_id、response_raw、invitation_status 和 completion_status",
+        "说明宽表/长表、实际间隔、缺失机制与纵向分析接口"
+      ],
+      "must_not": ["把问卷页面写成 Proc/List", "把未响应自动视为随机缺失", "把邮箱或工号写入公开分析数据"]
+    },
+    {
+      "id": "matlab-psychtoolbox-native-plan",
+      "scenario": "MATLAB 平台适配",
+      "input": "我们的实验室使用 MATLAB 和 Psychtoolbox，请把论文中的反应时任务重组为程序复现方案。",
+      "expected": [
+        "使用主入口、阶段函数或状态机、Screen、输入队列和事件结构等原生组件",
+        "记录计划 onset、实际 flip、响应时间与设备触发",
+        "记录 MATLAB、Psychtoolbox、操作系统、刷新率与同步测试",
+        "将组件输出连接到数据字典与分析字段"
+      ],
+      "must_not": ["强制改用 E-Prime", "把 MATLAB 函数写成 Proc/List", "缺少运行证据却声称 runtime-verified"]
+    },
+    {
+      "id": "explicit-python-analysis",
+      "scenario": "明确分析环境",
+      "input": "程序使用 PsychoPy，数据分析我们通常用 Python。请提供可复现的分析接口。",
+      "expected": [
+        "直接采用 Python 而不再询问分析软件",
+        "给出脚本或 notebook、依赖锁、随机种子、测试和执行顺序",
+        "保持导入、检查、排除、派生、模型、对比、图表和导出链路",
+        "记录 Python 与包版本"
+      ],
+      "must_not": ["输出固定 R 管线", "只给零散命令而没有分析契约", "虚构论文未报告的模型选项"]
+    },
+    {
+      "id": "unspecified-analysis-neutral-contract",
+      "scenario": "未指定分析环境",
+      "input": "请进行统计复现并整理分析接口，但我没有说明使用什么分析软件。",
+      "expected": [
+        "只询问一次研究团队通常使用的分析软件",
+        "未回答时输出 platform-neutral 分析契约",
+        "不询问与统计复现无关的实验实施平台",
+        "明确分析单位、字段、排除、派生、模型、对比、表图和版本记录"
+      ],
+      "must_not": ["静默默认 R", "强制询问 E-Prime", "因未选择软件而停止统计结构工作"]
+    },
+    {
+      "id": "spss-analysis-artifacts",
+      "scenario": "SPSS 分析适配",
+      "input": "我主要用 SPSS，请把这篇问卷论文的统计复现转成可交接的 SPSS 路线。",
+      "expected": [
+        "提供 .sps 语法、变量和值标签、导入、排除、派生变量与模型步骤",
+        "说明 SPSS 版本、扩展模块、语法日志和输出表映射",
+        "保留论文原分析环境与 SPSS 迁移差异"
+      ],
+      "must_not": ["只给菜单点击步骤而没有可保存语法", "默认转成 R", "省略值标签与缺失编码"]
+    }
+  ]
+}

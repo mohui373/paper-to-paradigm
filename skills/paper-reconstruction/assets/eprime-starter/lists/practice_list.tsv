@@ -1,0 +1,3 @@
+Procedure	Condition	TrialKind	Stimulus	CorrectAnswer	Weight	BlockIndex	TrialIndex
+PracticeTrialProc	practice	practice_a	LEFT	f	1	0	1
+PracticeTrialProc	practice	practice_b	RIGHT	j	1	0	2

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "anatomy-zh-paper",
+    "query": "帮我读懂这篇论文的理论脉络、三个 Study、统计结果和讨论。",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "anatomy-zh-meta",
+    "query": "请解剖这篇 meta-analysis，重点解释异质性、发表偏倚与结论边界。",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "anatomy-en-review",
+    "query": "Explain and critically review this psychology paper's theory, methods, findings, and limitations.",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "anatomy-en-delphi",
+    "query": "Analyze this Delphi consensus paper and distinguish agreement from evidence strength.",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "reconstruction-zh-psychopy",
+    "query": "根据这篇论文重组复现实验，给出 PsychoPy 被试流程、材料和数据字典。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-zh-field",
+    "query": "把论文中的现场博弈重建成可执行协议，并设计支付日志与 R 分析管线。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-en-jspsych",
+    "query": "Reconstruct and replicate this experiment in jsPsych with an event log and analysis plan.",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-mixed",
+    "query": "先解释核心操纵，然后把实验迁移到 E-Prime 并写出 participant flow。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-zh-innovation",
+    "query": "我想基于这篇研究加入新的调节变量，请评估这个创新并重组为可检验的研究设计。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-en-extension",
+    "query": "Extend this paper into a new study with a different population and an additional behavioral outcome.",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "anatomy-zh-public-claim",
+    "query": "这个博主引用论文说某种运动对所有人都有效，请核验这项科普主张是否符合原文。",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "anatomy-en-longitudinal",
+    "query": "Analyze this three-wave longitudinal paper and explain attrition, temporal order, and causal limits.",
+    "expected_skill": "paper-anatomy"
+  },
+  {
+    "id": "reconstruction-zh-longitudinal",
+    "query": "请重建这项三波员工纵向研究的问卷流程、匿名匹配、流失管理和数据字典。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-zh-matlab",
+    "query": "请把论文中的反应时实验迁移到 MATLAB Psychtoolbox，并连接事件日志与 Python 分析。",
+    "expected_skill": "paper-reconstruction"
+  },
+  {
+    "id": "reconstruction-en-spss-survey",
+    "query": "Reconstruct this longitudinal survey workflow for Qualtrics and reproduce the analysis in SPSS.",
+    "expected_skill": "paper-reconstruction"
+  }
+]
