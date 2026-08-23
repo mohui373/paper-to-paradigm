@@ -1,20 +1,40 @@
-# paper-to-paradigm
+<h1 align="center">paper-to-paradigm</h1>
 
-[简体中文](README.md) · [English](README_EN.md)
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/blob/main/README.md">简体中文</a> ·
+  <a href="https://github.com/mohui373/paper-to-paradigm/blob/main/README_EN.md">English</a> ·
+  <a href="#what">🧰 技能索引</a>
+</p>
 
-> **一句话介绍：** `paper-to-paradigm` 像一台专长实验与行为研究、但面向所有读者的“双臂论文手术机器人”——`paper-anatomy` 负责把理论、变量和参与者体验层层剖开，`paper-reconstruction` 负责按证据把来源、流程、材料与分析重新缝合；手术对象是论文，知情同意由你负责。
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml"><img src="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml/badge.svg" alt="Validate Skills"></a>
+  <img src="https://img.shields.io/badge/version-0.1.0-7C3AED?style=flat-square" alt="Version 0.1.0">
+  <img src="https://img.shields.io/badge/skills-2-0EA5E9?style=flat-square" alt="2 Skills">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-22C55E?style=flat-square" alt="Apache-2.0 License"></a>
+  <img src="https://img.shields.io/badge/focus-experimental_%26_behavioral-F97316?style=flat-square" alt="Experimental and behavioral research">
+</p>
 
-## 目录
+<p align="center"><strong>paper-to-paradigm</strong> 像一台专长实验与行为研究、但面向所有读者的“双臂论文手术机器人”——<strong>paper-anatomy</strong> 负责把理论、变量和参与者体验层层剖开，<strong>paper-reconstruction</strong> 负责按证据把来源、流程、材料与分析重新缝合；手术对象是论文，知情同意由你负责。</p>
 
-- [Why：为什么建立这套 Skills](#why为什么建立这套-skills)
-- [When：什么时候使用](#when什么时候使用)
-- [Who：适用于哪些研究与使用者](#who适用于哪些研究与使用者)
-- [What：目前有哪些功能](#what目前有哪些功能)
-- [Where：如何安装到不同 Agent](#where如何安装到不同-agent)
-- [How：如何调用、输入什么、得到什么](#how如何调用输入什么得到什么)
-- [参考文献](#参考文献)
+---
 
-## Why：为什么建立这套 Skills
+<a id="contents"></a>
+
+## 🧭 目录
+
+- [💡 Why：为什么建立这套 Skills](#why)
+- [⏰ When：什么时候使用](#when)
+- [👥 Who：适用于哪些研究与使用者](#who)
+- [🧰 What：目前有哪些功能](#what)
+- [📦 Where：如何安装到不同 Agent](#where)
+- [🚀 How：如何调用、输入什么、得到什么](#how)
+- [📚 参考文献](#references)
+
+---
+
+<a id="why"></a>
+
+## 💡 Why：为什么建立这套 Skills
 
 我本科阶段学习人力资源管理，目前是基础心理学研究生，主要研究方向包括社会与实验心理学、组织行为、道德行为与决策。这个项目最初并不是为了再做一个“论文摘要器”，而是来自我在阅读论文、开展研究和设计实验时反复遇到的一组真实问题。
 
@@ -42,9 +62,13 @@
 
 随着案例逐渐积累，同一种研究设计的成功经验、失败风险和实现边界也可以被保留下来。这样，阅读不再只是一次性的“获取结论”，而能够成为后续研究设计、跨领域迁移和方法改进的起点。这个项目不替代原文、领域专家或研究者的判断；它希望让判断建立在更完整、更透明、也更接近被试实际体验的证据之上。
 
-## When：什么时候使用
+---
 
-### 第一类：学术工作与研究需要
+<a id="when"></a>
+
+## ⏰ When：什么时候使用
+
+### 🎓 第一类：学术工作与研究需要
 
 这套 Skills 首先服务于与论文高度相关的学习和研究任务。这里的“学习”不是停留在记住作者结论，而是为了能够提出问题、选择理论、理解方法、设计研究和评价证据。
 
@@ -61,7 +85,7 @@
 
 因此，它既可以出现在研究的前端——开题、综述、理论选择和研究构思，也可以进入中后端——实验设计、材料准备、数据结构、分析复现与后续扩展。一次结构化阅读的结果可以继续被下一阶段使用，而不是每换一个任务就从零开始理解同一篇论文。
 
-### 第二类：日常生活中的信息核验
+### 🛡️ 第二类：日常生活中的信息核验
 
 现在越来越多健康、运动、心理、教育和管理领域的科普创作者会主动附上参考文献。这是一个值得肯定的变化：读者至少有机会返回来源，而不是只能相信一句无法追踪的结论。
 
@@ -80,11 +104,15 @@
 
 这种核验的意义不只是“抓错”，而是把一次被动的信息输入变成主动理解：读者不仅知道某句话可不可信，也能顺便学会论文中的指标代表什么、研究设计能够回答什么、结论为什么有边界。它不是万能事实核查，也不代替医学诊断、临床指南或专业意见；它提供的是一条从网络主张返回论文证据、再形成自主判断的路径。
 
-## Who：适用于哪些研究与使用者
+---
+
+<a id="who"></a>
+
+## 👥 Who：适用于哪些研究与使用者
 
 这套 Skills **面向所有读者，专长是实验与行为研究**：既包括研究生、本科生、研究者、教师和研究助理，也包括希望主动核验论文证据的普通读者。它不以学科或研究类型设限；只要能够提供论文或其他可追溯证据，就会根据研究问题、证据生产方式和使用目标选择相应的解剖或重组路线，并在实验范式、参与者体验、行为测量和实现链条上提供更细的分析。
 
-### 不同领域会关注不同问题
+### 🧩 不同领域会关注不同问题
 
 | 领域或任务 | 自适应关注点 | 示例问题 |
 |---|---|---|
@@ -95,7 +123,7 @@
 | 健康与运动研究 | 研究设计、对照组、指标含义、替代终点、效应大小和适用人群 | “显著改善某指标”是否等于对健康结果具有实际意义？ |
 | 教育、传播与 HCI | 任务生态、学习/使用情境、行为日志、短期与长期结果 | 实验室点击行为能否代表真实平台中的持续使用？ |
 
-### 不同研究设计会采用不同判断路线
+### 🔬 不同研究设计会采用不同判断路线
 
 | 研究类型 | 重点还原什么 | 重点防止什么 |
 |---|---|---|
@@ -107,22 +135,32 @@
 | 系统综述与 Meta-analysis | 检索、纳排、编码、效应构造、异质性与偏倚 | 用汇总效应掩盖证据质量、异质性和因果边界 |
 | Delphi、共识与指南 | 专家选择、轮次、反馈、阈值和推荐形成 | 把专家赞同率当作效应量或高确定性证据 |
 
-当论文不是实验研究时，Skill 不会虚构被试 Screen Flow，而会改为还原该研究类型真实的证据生产过程。
+> [!NOTE]
+> 当论文不是实验研究时，Skill 不会虚构被试 Screen Flow，而会改为还原该研究类型真实的证据生产过程。
 
-## What：目前有哪些功能
+---
 
-### 两个核心 Skill
+<a id="what"></a>
+
+## 🧰 What：目前有哪些功能
+
+### 🤖 两个核心 Skill
+
+<p align="center">
+  <a href="skills/paper-anatomy/README.md"><img src="https://img.shields.io/badge/paper--anatomy-Read_%26_Audit-7C3AED?style=for-the-badge" alt="paper-anatomy: Read and Audit"></a>
+  <a href="skills/paper-reconstruction/README.md"><img src="https://img.shields.io/badge/paper--reconstruction-Reconstruct_%26_Replicate-0EA5E9?style=for-the-badge" alt="paper-reconstruction: Reconstruct and Replicate"></a>
+</p>
 
 | Skill | 一句话定位 | 主要任务 | 使用边界 | 默认输出 |
 |---|---|---|---|---|
-| `paper-anatomy` | 从研究者证据链与参与者体验两条视角解剖论文 | 理论源头、变量与测量、Study 流程、统计结果、页码/图表定位、结论、限制和后续证据 | 不负责把实验落地为程序 | ABC 论文解剖报告 + 来源定位清单 |
-| `paper-reconstruction` | 把论文从参与者体验到后台实现重组为复现包 | DOI/附录/Supplement/OSF 来源账本、问卷/纵向流程、平台原生结构、材料、日志、数据字典、目标软件分析管线、验证与研究发展 | 不替代以理解和评议为目标的阅读 | 最小充分产物或 ABCDE 复现包 |
+| [`paper-anatomy`](skills/paper-anatomy/README.md) | 从研究者证据链与参与者体验两条视角解剖论文 | 理论源头、变量与测量、Study 流程、统计结果、页码/图表定位、结论、限制和后续证据 | 不负责把实验落地为程序 | ABC 论文解剖报告 + 来源定位清单 |
+| [`paper-reconstruction`](skills/paper-reconstruction/README.md) | 把论文从参与者体验到后台实现重组为复现包 | DOI/附录/Supplement/OSF 来源账本、问卷/纵向流程、平台原生结构、材料、日志、数据字典、目标软件分析管线、验证与研究发展 | 不替代以理解和评议为目标的阅读 | 最小充分产物或 ABCDE 复现包 |
 
 `paper-reconstruction` 目前把 E-Prime 作为第一条深度实现路径：逐个定义 Session/Block/Trial Proc、调用它们的 List、对象顺序，以及 Trial 的串联、连续重复、交错重复、嵌套重复、条件路由或外部并行关系。结构化复现包会继续连接事件日志、数据字典和分析契约，并通过语义审计防止同一条件或字段在不同文件中改名、漏记或失去对应。只有完成 `.es3 → .ebs3 → E-Run 烟雾测试 → 日志核对` 后，才会把运行状态标为“已经验证”。
 
 非 E-Prime 路线不会只做名称替换：PsychoPy、MATLAB/Psychtoolbox、jsPsych、Qualtrics/SoSci、oTree、Inquisit、Gorilla 和现场协议分别使用原生组件、文件、日志与验证结构。问卷与纵向研究还会单独处理题项 ID、显示逻辑、匿名匹配、波次、提醒、流失、跨波版本、paradata 和缺失机制。结构化跨平台计划可由校验器检查阶段、组件、输出字段、分析接口与运行证据。
 
-### 基于已有研究的个性化创新
+### 🌱 基于已有研究的个性化创新
 
 当用户产生新想法时，`paper-reconstruction` 可以在原研究基础上发展新的群体、情境、机制、变量、材料、互动方式、测量和平台，而不是机械复制。它会：
 
@@ -132,19 +170,25 @@
 4. 区分原文支持、后续证据支持、用户推测和待验证部分；
 5. 未检索当前文献时，不把想法直接称为“首次”“创新”或“研究空白”。
 
-个性化创新不是随意给别人的研究“加料”，而是把自己的想法变成有来源、有边界、可检验的新研究设计。
+> [!IMPORTANT]
+> 个性化创新不是随意给别人的研究“加料”，而是把自己的想法变成有来源、有边界、可检验的新研究设计。
 
-### 根据任务进行个性化提问与工具适配
+### 🎛️ 根据任务进行个性化提问与工具适配
 
 个性化不等于第一次安装时填写一长串偏好。Skills 会先判断用户真正需要的产物，再只询问会改变结果的问题：程序复现或平台迁移才询问研究团队使用的实施软件；统计复现、分析代码或分析接口才询问使用 R、Python、SPSS、Mplus、MATLAB、Stata、SAS、JASP/Jamovi 还是其他环境。上下文已经说明时不会重复询问，未回答时也会继续完成平台中立部分。
 
 因此，同一篇论文可以得到不同但语义一致的交付：E-Prime 用户获得 Proc/List 与 E-Run 路径，PsychoPy 用户获得 Routine/Loop/conditions，MATLAB 用户获得阶段函数、Screen 和事件结构，问卷研究者获得 Block/逻辑/波次/匿名匹配，SPSS 或 Python 用户则获得对应的原生分析产物，而不是统一被转换成 R。
 
-## Where：如何安装到不同 Agent
+---
 
-本项目采用单仓库、多 Skill 目录结构；安装时请保留两个 Skill 各自的完整目录，不要只复制 `SKILL.md`。
+<a id="where"></a>
 
-### 方式一：`npx skills` 安装
+## 📦 Where：如何安装到不同 Agent
+
+> [!IMPORTANT]
+> 本项目采用单仓库、多 Skill 目录结构；安装时请保留两个 Skill 各自的完整目录，不要只复制 `SKILL.md`。
+
+### 🟢 方式一：`npx skills` 安装
 
 需要 Node.js 18 或更高版本。先查看仓库中的可安装 Skill：
 
@@ -177,7 +221,7 @@ git clone https://github.com/mohui373/paper-to-paradigm.git
 cd paper-to-paradigm
 ```
 
-### 方式二：Claude Code
+### 🟠 方式二：Claude Code
 
 保留完整 Skill 目录，不能只复制 `SKILL.md`。
 
@@ -200,7 +244,7 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $claudeSkills
 
 重新开启 Claude Code 会话后，用自然语言触发，或明确要求使用 `paper-anatomy` / `paper-reconstruction`。
 
-### 方式三：Codex
+### 🔵 方式三：Codex
 
 macOS / Linux：
 
@@ -221,7 +265,7 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $codexSkills
 
 重新启动 Codex 或新建任务，以便重新发现 Skill。若已存在同名目录，请先备份并确认版本，避免新旧文件混合。
 
-### 方式四：其他 Agent
+### ⚪ 方式四：其他 Agent
 
 对于支持 `SKILL.md` 或自定义 prompt / subagent / slash command 的 Agent：
 
@@ -231,9 +275,13 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $codexSkills
 4. 不要只复制 `SKILL.md`，也不要混合两个 Skill 的输出契约；
 5. 目标 Agent 若有自己的 frontmatter 规范，再做最小兼容调整。
 
-## How：如何调用、输入什么、得到什么
+---
 
-### Skill 索引
+<a id="how"></a>
+
+## 🚀 How：如何调用、输入什么、得到什么
+
+### 🗺️ Skill 索引
 
 | 想做什么 | 使用 | 推荐输入 | 主要输出 |
 |---|---|---|---|
@@ -242,7 +290,7 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $codexSkills
 | 重组与复现实验、问卷或纵向研究 | `paper-reconstruction` | 论文 DOI、附录/Supplement/OSF、复现层级；按需提供实施平台、分析软件和现实限制 | 来源账本、参与者/受访者流程、平台原生结构、材料/数据、目标软件分析、验证与研究发展 |
 | 基于论文发展新研究 | `paper-reconstruction` | 原论文、你的想法、目标群体/情境、可用资源 | 理论不变量、可调参数、创新状态、设计方案与验证计划 |
 
-### 自动触发与显式调用
+### ⚡ 自动触发与显式调用
 
 安装后可直接使用中文或英文描述任务；需要避免路由歧义时，显式指定 Skill：
 
@@ -254,9 +302,10 @@ $paper-anatomy 请解剖这篇论文，重点检查变量、被试体验、统�
 $paper-reconstruction 请把这篇论文重组为可执行的 PsychoPy 实验，并评估我增加调节变量的想法。
 ```
 
-如果一个请求同时要求解释与复现，以 `paper-reconstruction` 统领交付，并完成实现所需的论文解剖。
+> [!TIP]
+> 如果一个请求同时要求解释与复现，以 `paper-reconstruction` 统领交付，并完成实现所需的论文解剖。
 
-### 输入输出示例一：核验网络科普
+### 🔎 输入输出示例一：核验网络科普
 
 输入：
 
@@ -278,7 +327,7 @@ C. 论文真正支持什么：带来源指针的作者结论、限制、适用�
 博主说法 → 原文证据 → 一致 / 部分一致 / 过度概括 / 不支持 → 判断理由
 ```
 
-### 输入输出示例二：复现并发展新研究
+### 🧪 输入输出示例二：复现并发展新研究
 
 输入：
 
@@ -299,7 +348,11 @@ D. 材料清单、事件日志、数据字典、Python 分析契约与验证
 E. 理论不变量、可调参数、组织认同扩展、创新状态与 pilot 方案
 ```
 
-## 参考文献
+---
+
+<a id="references"></a>
+
+## 📚 参考文献
 
 Consensus. (2025, June 23). *How it works & Consensus FAQ’s*. https://consensus.app/home/blog/how-consensus-works/
 

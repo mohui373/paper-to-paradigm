@@ -1,20 +1,40 @@
-# paper-to-paradigm
+<h1 align="center">paper-to-paradigm</h1>
 
-[简体中文](README.md) · [English](README_EN.md)
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/blob/main/README.md">简体中文</a> ·
+  <a href="https://github.com/mohui373/paper-to-paradigm/blob/main/README_EN.md">English</a> ·
+  <a href="#what">🧰 Skill Index</a>
+</p>
 
-> **In one sentence:** `paper-to-paradigm` is a two-armed paper-surgery robot for every reader, with a specialty in experimental and behavioral research: `paper-anatomy` dissects theory, variables, evidence, and participant experience, while `paper-reconstruction` stitches sources, procedures, materials, data, and analyses back into a reproducible study. The patient is the paper; informed consent is still your responsibility.
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml"><img src="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml/badge.svg" alt="Validate Skills"></a>
+  <img src="https://img.shields.io/badge/version-0.1.0-7C3AED?style=flat-square" alt="Version 0.1.0">
+  <img src="https://img.shields.io/badge/skills-2-0EA5E9?style=flat-square" alt="2 Skills">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-22C55E?style=flat-square" alt="Apache-2.0 License"></a>
+  <img src="https://img.shields.io/badge/focus-experimental_%26_behavioral-F97316?style=flat-square" alt="Experimental and behavioral research">
+</p>
 
-## Contents
+<p align="center"><strong>paper-to-paradigm</strong> is a two-armed paper-surgery robot for every reader, with a specialty in experimental and behavioral research: <strong>paper-anatomy</strong> dissects theory, variables, evidence, and participant experience, while <strong>paper-reconstruction</strong> stitches sources, procedures, materials, data, and analyses back into a reproducible study. The patient is the paper; informed consent is still your responsibility.</p>
 
-- [Why: Why build these Skills?](#why-why-build-these-skills)
-- [When: When should you use them?](#when-when-should-you-use-them)
-- [Who: Who and what research are they for?](#who-who-and-what-research-are-they-for)
-- [What: What can they do now?](#what-what-can-they-do-now)
-- [Where: How do you install them in different Agents?](#where-how-do-you-install-them-in-different-agents)
-- [How: How do you invoke them, what do you provide, and what do you receive?](#how-how-do-you-invoke-them-what-do-you-provide-and-what-do-you-receive)
-- [References](#references)
+---
 
-## Why: Why build these Skills?
+<a id="contents"></a>
+
+## 🧭 Contents
+
+- [💡 Why: Why build these Skills?](#why)
+- [⏰ When: When should you use them?](#when)
+- [👥 Who: Who and what research are they for?](#who)
+- [🧰 What: What can they do now?](#what)
+- [📦 Where: How do you install them in different Agents?](#where)
+- [🚀 How: How do you invoke them, what do you provide, and what do you receive?](#how)
+- [📚 References](#references)
+
+---
+
+<a id="why"></a>
+
+## 💡 Why: Why build these Skills?
 
 I studied human resource management as an undergraduate and am now a graduate student in basic psychology. My main interests include social and experimental psychology, organizational behavior, moral behavior, and decision-making. This project did not begin as another paper summarizer. It grew out of a set of recurring problems I encountered while reading papers, conducting research, and designing experiments.
 
@@ -42,9 +62,13 @@ The collection therefore aims to do three things:
 
 As experience accumulates, recurring strengths, risks, and implementation limits of the same design family can be retained. Reading then becomes more than one-time conclusion retrieval: it becomes a starting point for study design, cross-domain adaptation, and methodological improvement. This project does not replace the original paper, domain experts, or researcher judgment. It aims to make that judgment more complete, transparent, and attentive to what participants actually experience.
 
-## When: When should you use them?
+---
 
-### 1. Academic and research work
+<a id="when"></a>
+
+## ⏰ When: When should you use them?
+
+### 🎓 1. Academic and research work
 
 These Skills primarily support tasks closely connected to papers. Here, “learning” means more than memorizing conclusions: it means becoming able to ask questions, select theory, understand methods, design studies, and evaluate evidence.
 
@@ -61,7 +85,7 @@ These Skills primarily support tasks closely connected to papers. Here, “learn
 
 The Skills can therefore support both the front end of research—proposals, reviews, theory selection, and study conception—and later stages such as experimental design, material preparation, data structure, statistical reproduction, and extension. A structured reading can feed the next stage instead of forcing the same paper to be understood again from scratch.
 
-### 2. Everyday information verification
+### 🛡️ 2. Everyday information verification
 
 More health, exercise, psychology, education, and management communicators now attach references to popular-science claims. This is a positive development: readers at least have a route back to the source rather than having to trust an untraceable statement.
 
@@ -80,11 +104,15 @@ When the reader does not understand a field's measures, models, or effect sizes,
 
 The goal is not merely to catch errors. It is to turn passive input into active understanding: readers learn not only whether a statement is credible, but also what the measure means, what the design can answer, and why the conclusion has boundaries. This is not universal fact-checking and does not replace diagnosis, clinical guidelines, or professional advice. It provides a route from an online claim back to paper-level evidence and independent judgment.
 
-## Who: Who and what research are they for?
+---
+
+<a id="who"></a>
+
+## 👥 Who: Who and what research are they for?
 
 The collection is **for all readers, with a specialty in experimental and behavioral research**. It serves graduate and undergraduate students, researchers, teachers, research assistants, and non-specialist readers who want to verify paper-based claims. It is not restricted to one discipline or study type. Given a paper or another traceable source, it selects an anatomy or reconstruction route based on the research question, evidence-production process, and intended use, with greater depth in paradigms, participant experience, behavioral measurement, and implementation chains.
 
-### Different fields, different emphases
+### 🧩 Different fields, different emphases
 
 | Field or task | Adaptive focus | Example question |
 |---|---|---|
@@ -95,7 +123,7 @@ The collection is **for all readers, with a specialty in experimental and behavi
 | Health and exercise research | Design, control group, measure meaning, surrogate endpoints, effect size, population | Does a statistically improved indicator imply a meaningful health benefit? |
 | Education, communication, and HCI | Task ecology, learning/use context, behavioral logs, short- and long-term outcomes | Does a laboratory click represent sustained real-world platform use? |
 
-### Different designs, different judgment routes
+### 🔬 Different designs, different judgment routes
 
 | Study type | What to reconstruct | What to guard against |
 |---|---|---|
@@ -107,22 +135,32 @@ The collection is **for all readers, with a specialty in experimental and behavi
 | Systematic review and meta-analysis | Search, eligibility, coding, effect construction, heterogeneity, bias | Letting a pooled effect hide evidence quality, heterogeneity, and causal limits |
 | Delphi, consensus, and guideline | Expert selection, rounds, feedback, thresholds, recommendation formation | Treating expert agreement as an effect size or high-certainty evidence |
 
-When a paper is not experimental, the Skill does not invent a participant screen flow. It reconstructs the evidence-production process appropriate to that study type.
+> [!NOTE]
+> When a paper is not experimental, the Skill does not invent a participant screen flow. It reconstructs the evidence-production process appropriate to that study type.
 
-## What: What can they do now?
+---
 
-### Two core Skills
+<a id="what"></a>
+
+## 🧰 What: What can they do now?
+
+### 🤖 Two core Skills
+
+<p align="center">
+  <a href="skills/paper-anatomy/README_EN.md"><img src="https://img.shields.io/badge/paper--anatomy-Read_%26_Audit-7C3AED?style=for-the-badge" alt="paper-anatomy: Read and Audit"></a>
+  <a href="skills/paper-reconstruction/README_EN.md"><img src="https://img.shields.io/badge/paper--reconstruction-Reconstruct_%26_Replicate-0EA5E9?style=for-the-badge" alt="paper-reconstruction: Reconstruct and Replicate"></a>
+</p>
 
 | Skill | Position | Main tasks | Boundary | Default output |
 |---|---|---|---|---|
-| `paper-anatomy` | Dissect a paper through both the researcher evidence chain and participant experience | Theoretical origins, variables and measures, Study flow, statistics, page/figure/table locators, conclusions, limitations, later evidence | Does not turn the study into a program | ABC anatomy report plus source-location sidecar |
-| `paper-reconstruction` | Reassemble a paper from participant experience to backend implementation | DOI/appendix/Supplement/OSF ledger, survey/longitudinal flow, platform-native structures, materials, logs, data dictionary, target-software analysis, validation, research development | Does not replace reading whose goal is understanding and critique | Minimum sufficient artifacts or an ABCDE package |
+| [`paper-anatomy`](skills/paper-anatomy/README_EN.md) | Dissect a paper through both the researcher evidence chain and participant experience | Theoretical origins, variables and measures, Study flow, statistics, page/figure/table locators, conclusions, limitations, later evidence | Does not turn the study into a program | ABC anatomy report plus source-location sidecar |
+| [`paper-reconstruction`](skills/paper-reconstruction/README_EN.md) | Reassemble a paper from participant experience to backend implementation | DOI/appendix/Supplement/OSF ledger, survey/longitudinal flow, platform-native structures, materials, logs, data dictionary, target-software analysis, validation, research development | Does not replace reading whose goal is understanding and critique | Minimum sufficient artifacts or an ABCDE package |
 
 `paper-reconstruction` now treats E-Prime as its first deep implementation path. It defines Session/Block/Trial Procedures, the Lists that call them, object order, and whether trials are serial, serially repeated, interleaved, nested, conditional, or truly parallel through an external synchronization contract. A structured bundle connects the event log, data dictionary, and analysis contract, while semantic auditing prevents conditions and fields from being renamed, omitted, or disconnected across artifacts. Runtime status is not marked as verified until the `.es3 → .ebs3 → E-Run smoke test → log audit` chain is complete.
 
 Non-E-Prime routes are not cosmetic renamings. PsychoPy, MATLAB/Psychtoolbox, jsPsych, Qualtrics/SoSci, oTree, Inquisit, Gorilla, and field protocols use native components, files, logs, and validation structures. Survey and longitudinal routes separately handle item IDs, display logic, anonymous matching, waves, reminders, attrition, cross-wave versions, paradata, and missingness. A cross-platform validator checks phases, native components, output fields, analysis interfaces, and runtime evidence.
 
-### Personalized innovation from existing research
+### 🌱 Personalized innovation from existing research
 
 When users have new ideas, `paper-reconstruction` can extend the original study with a new population, context, mechanism, variable, material, interaction, measure, or platform rather than copying it mechanically. It will:
 
@@ -132,19 +170,25 @@ When users have new ideas, `paper-reconstruction` can extend the original study 
 4. separate original-paper support, later evidence, user hypotheses, and untested components;
 5. avoid calling an idea “first,” “novel,” or a “research gap” before a current literature search.
 
-Personalized innovation is not arbitrary decoration. It is the process of turning an idea into a traceable, bounded, and testable study design.
+> [!IMPORTANT]
+> Personalized innovation is not arbitrary decoration. It is the process of turning an idea into a traceable, bounded, and testable study design.
 
-### Task-specific questions and tool adaptation
+### 🎛️ Task-specific questions and tool adaptation
 
 Personalization does not mean a long onboarding questionnaire. The Skills first identify the requested artifact and ask only questions that change delivery. Implementation software is requested only for program replication or platform migration; R, Python, SPSS, Mplus, MATLAB, Stata, SAS, JASP/Jamovi, or another analysis environment is requested only for statistical reproduction, analysis code, or an analysis interface. Known information is not requested again, and unanswered questions do not block platform-neutral work.
 
 The same paper can therefore produce different but semantically aligned artifacts: Proc/List and E-Run for E-Prime, Routine/Loop/conditions for PsychoPy, phase functions/Screen/event structures for MATLAB, Blocks/logic/waves/anonymous matching for surveys, and native SPSS or Python analysis artifacts rather than a forced R conversion.
 
-## Where: How do you install them in different Agents?
+---
 
-This repository uses multiple Skill directories in one collection. Keep each Skill directory intact during installation rather than copying only `SKILL.md`.
+<a id="where"></a>
 
-### Option 1: install with `npx skills`
+## 📦 Where: How do you install them in different Agents?
+
+> [!IMPORTANT]
+> This repository uses multiple Skill directories in one collection. Keep each Skill directory intact during installation rather than copying only `SKILL.md`.
+
+### 🟢 Option 1: install with `npx skills`
 
 Node.js 18 or later is required. List available Skills first:
 
@@ -177,7 +221,7 @@ git clone https://github.com/mohui373/paper-to-paradigm.git
 cd paper-to-paradigm
 ```
 
-### Option 2: Claude Code
+### 🟠 Option 2: Claude Code
 
 Keep each entire Skill directory; copying only `SKILL.md` is not sufficient.
 
@@ -200,7 +244,7 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $claudeSkills
 
 Start a new Claude Code session, then invoke the Skills with natural language or by explicitly naming `paper-anatomy` or `paper-reconstruction`.
 
-### Option 3: Codex
+### 🔵 Option 3: Codex
 
 macOS / Linux:
 
@@ -221,7 +265,7 @@ Copy-Item -Recurse -Force ".\skills\paper-reconstruction" $codexSkills
 
 Restart Codex or open a new task so the Skills are discovered again. If a directory with the same name already exists, back it up and check versions first to avoid mixing old and new files.
 
-### Option 4: other Agents
+### ⚪ Option 4: other Agents
 
 For Agents that support `SKILL.md`, custom prompts, subagents, or slash commands:
 
@@ -231,9 +275,13 @@ For Agents that support `SKILL.md`, custom prompts, subagents, or slash commands
 4. do not copy only `SKILL.md`, and do not mix the two output contracts;
 5. make only the minimum frontmatter adaptation required by the target Agent.
 
-## How: How do you invoke them, what do you provide, and what do you receive?
+---
 
-### Skill index
+<a id="how"></a>
+
+## 🚀 How: How do you invoke them, what do you provide, and what do you receive?
+
+### 🗺️ Skill index
 
 | Goal | Use | Recommended input | Main output |
 |---|---|---|---|
@@ -242,7 +290,7 @@ For Agents that support `SKILL.md`, custom prompts, subagents, or slash commands
 | Reconstruct an experiment, survey, or longitudinal study | `paper-reconstruction` | DOI, appendix/Supplement/OSF, replication level; implementation platform, analysis software, and limits when relevant | source ledger, participant/respondent flow, native implementation, materials/data, target-software analysis, validation, development |
 | Develop a new study from a paper | `paper-reconstruction` | Original paper, your idea, target population/context, available resources | Theoretical invariants, adjustable parameters, novelty status, design, and validation plan |
 
-### Automatic and explicit invocation
+### ⚡ Automatic and explicit invocation
 
 After installation, describe the task in Chinese or English. To avoid routing ambiguity, name the Skill explicitly:
 
@@ -256,9 +304,10 @@ $paper-reconstruction Reconstruct this paper as an executable PsychoPy experimen
 and evaluate my proposal to add a moderator.
 ```
 
-If one request asks for both interpretation and replication, `paper-reconstruction` leads the delivery and performs the minimum paper anatomy required for implementation.
+> [!TIP]
+> If one request asks for both interpretation and replication, `paper-reconstruction` leads the delivery and performs the minimum paper anatomy required for implementation.
 
-### Input/output example 1: verify an online claim
+### 🔎 Input/output example 1: verify an online claim
 
 Input:
 
@@ -285,7 +334,7 @@ Creator claim → paper evidence → aligned / partly aligned / overstated / uns
 → reasoned judgment
 ```
 
-### Input/output example 2: replicate and extend a study
+### 🧪 Input/output example 2: replicate and extend a study
 
 Input:
 
@@ -309,7 +358,11 @@ E. Theoretical invariants, adjustable parameters, moderator extension,
    novelty status, and pilot plan
 ```
 
-## References
+---
+
+<a id="references"></a>
+
+## 📚 References
 
 Consensus. (2025, June 23). *How it works & Consensus FAQ’s*. https://consensus.app/home/blog/how-consensus-works/
 
