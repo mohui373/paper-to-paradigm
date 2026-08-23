@@ -10,6 +10,7 @@
   <a href="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml"><img src="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml/badge.svg" alt="Validate Skills"></a>
   <img src="https://img.shields.io/badge/version-0.1.0-7C3AED?style=flat-square" alt="Version 0.1.0">
   <img src="https://img.shields.io/badge/skills-2-0EA5E9?style=flat-square" alt="2 Skills">
+  <a href="https://github.com/mohui373/paper-to-paradigm/stargazers"><img src="https://img.shields.io/github/stars/mohui373/paper-to-paradigm?style=flat-square&amp;logo=github&amp;label=stars&amp;color=F5B700" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-22C55E?style=flat-square" alt="Apache-2.0 License"></a>
   <img src="https://img.shields.io/badge/focus-experimental_%26_behavioral-F97316?style=flat-square" alt="Experimental and behavioral research">
 </p>
@@ -29,6 +30,7 @@
 - [📦 Where: How do you install them in different Agents?](#where)
 - [🚀 How: How do you invoke them, what do you provide, and what do you receive?](#how)
 - [📚 References](#references)
+- [⭐ Star History](#star-history)
 
 ---
 
@@ -36,7 +38,7 @@
 
 ## 💡 Why: Why build these Skills?
 
-I studied human resource management as an undergraduate and am now a graduate student in basic psychology. My main interests include social and experimental psychology, organizational behavior, moral behavior, and decision-making. This project did not begin as another paper summarizer. It grew out of a set of recurring problems I encountered while reading papers, conducting research, and designing experiments.
+I am currently a graduate student in basic psychology, with an undergraduate background in human resource management. I focus primarily on behavioral experiments, with research interests in social and experimental psychology, organizational behavior, moral behavior, and decision-making. This project did not begin as another paper summarizer. It grew out of a set of recurring problems I encountered while reading papers, conducting research, and designing experiments.
 
 Many excellent literature-search and paper-reading prompts and Skills already exist. They can help us find papers quickly and summarize background, methods, results, and conclusions. Consensus, for example, uses keyword and semantic search over titles and abstracts, then offers features such as Study Snapshot, Ask Paper, Pro Analysis, and Consensus Meter for single-paper and multi-paper synthesis ([Consensus, 2025](https://consensus.app/home/blog/how-consensus-works/)). These tools are good at answering “what should I find?” and “roughly what does the literature say?” Yet once the purpose of reading shifts from awareness to research, a gap may remain: **we know the conclusion, but we still cannot see clearly how it was produced by the research design.**
 
@@ -377,3 +379,19 @@ Suarez-Lledo, V., & Alvarez-Galvez, J. (2021). Prevalence of health misinformati
 Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., & Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. *BMJ, 349*, Article g7015. https://doi.org/10.1136/bmj.g7015
 
 Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559
+
+---
+
+<a id="star-history"></a>
+
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://www.star-history.com/#mohui373/paper-to-paradigm&amp;Date"><img src="https://api.star-history.com/svg?repos=mohui373/paper-to-paradigm&amp;type=Date" alt="paper-to-paradigm Star History Chart"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/stargazers"><img src="https://img.shields.io/github/stars/mohui373/paper-to-paradigm?style=for-the-badge&amp;logo=github&amp;label=GitHub%20Stars&amp;color=F5B700" alt="GitHub stars"></a>
+</p>
+
+<p align="center">The badge tracks the current Star count, while the chart shows cumulative growth by date. A new repository may not show a curve until its first data points have been collected and synchronized.</p>

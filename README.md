@@ -10,6 +10,7 @@
   <a href="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml"><img src="https://github.com/mohui373/paper-to-paradigm/actions/workflows/validate.yml/badge.svg" alt="Validate Skills"></a>
   <img src="https://img.shields.io/badge/version-0.1.0-7C3AED?style=flat-square" alt="Version 0.1.0">
   <img src="https://img.shields.io/badge/skills-2-0EA5E9?style=flat-square" alt="2 Skills">
+  <a href="https://github.com/mohui373/paper-to-paradigm/stargazers"><img src="https://img.shields.io/github/stars/mohui373/paper-to-paradigm?style=flat-square&amp;logo=github&amp;label=stars&amp;color=F5B700" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-22C55E?style=flat-square" alt="Apache-2.0 License"></a>
   <img src="https://img.shields.io/badge/focus-experimental_%26_behavioral-F97316?style=flat-square" alt="Experimental and behavioral research">
 </p>
@@ -29,6 +30,7 @@
 - [📦 Where：如何安装到不同 Agent](#where)
 - [🚀 How：如何调用、输入什么、得到什么](#how)
 - [📚 参考文献](#references)
+- [⭐ Star 历史](#star-history)
 
 ---
 
@@ -36,7 +38,7 @@
 
 ## 💡 Why：为什么建立这套 Skills
 
-我本科阶段学习人力资源管理，目前是基础心理学研究生，主要研究方向包括社会与实验心理学、组织行为、道德行为与决策。这个项目最初并不是为了再做一个“论文摘要器”，而是来自我在阅读论文、开展研究和设计实验时反复遇到的一组真实问题。
+我目前是基础心理学研究生，本科阶段学习人力资源管理，主要专注于行为实验，研究兴趣包括社会与实验心理学、组织行为、道德行为与决策。这个项目最初并不是为了再做一个“论文摘要器”，而是来自我在阅读论文、开展研究和设计实验时反复遇到的一组真实问题。
 
 现在已经有很多优秀的文献检索、阅读 Prompt 和 Skill。它们能够帮助我们快速找到论文，概括背景、方法、结果与结论。例如 Consensus 会先通过标题和摘要进行关键词与语义检索，再使用 Study Snapshot、Ask Paper、Pro Analysis 和 Consensus Meter 分析单篇或综合多篇论文（[Consensus, 2025](https://consensus.app/home/blog/how-consensus-works/)）。这些工具很好地解决了“找到什么”和“论文大致说了什么”，但当阅读目标从了解转向研究时，仍可能留下一个缺口：**我们知道了结论，却还没有真正看清结论是怎样从研究设计中产生的。**
 
@@ -367,3 +369,19 @@ Suarez-Lledo, V., & Alvarez-Galvez, J. (2021). Prevalence of health misinformati
 Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., & Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. *BMJ, 349*, Article g7015. https://doi.org/10.1136/bmj.g7015
 
 Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559
+
+---
+
+<a id="star-history"></a>
+
+## ⭐ Star 历史
+
+<p align="center">
+  <a href="https://www.star-history.com/#mohui373/paper-to-paradigm&amp;Date"><img src="https://api.star-history.com/svg?repos=mohui373/paper-to-paradigm&amp;type=Date" alt="paper-to-paradigm Star History Chart"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/mohui373/paper-to-paradigm/stargazers"><img src="https://img.shields.io/github/stars/mohui373/paper-to-paradigm?style=for-the-badge&amp;logo=github&amp;label=GitHub%20Stars&amp;color=F5B700" alt="GitHub stars"></a>
+</p>
+
+<p align="center">徽章实时显示当前 Star 数量，图表按日期展示累计变化；新仓库的曲线可能在产生并同步首批数据点后出现。</p>
