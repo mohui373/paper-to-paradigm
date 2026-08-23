@@ -12,12 +12,13 @@
 - [What: What can they do now?](#what-what-can-they-do-now)
 - [Where: How do you install them in different Agents?](#where-how-do-you-install-them-in-different-agents)
 - [How: How do you invoke them, what do you provide, and what do you receive?](#how-how-do-you-invoke-them-what-do-you-provide-and-what-do-you-receive)
+- [References](#references)
 
 ## Why: Why build these Skills?
 
 I studied human resource management as an undergraduate and am now a graduate student in basic psychology. My main interests include social and experimental psychology, organizational behavior, moral behavior, and decision-making. This project did not begin as another paper summarizer. It grew out of a set of recurring problems I encountered while reading papers, conducting research, and designing experiments.
 
-Many excellent literature-search and paper-reading prompts and Skills already exist. They can help us find papers quickly and summarize background, methods, results, and conclusions. Consensus, for example, uses keyword and semantic search over titles and abstracts, then offers features such as Study Snapshot, Ask Paper, Pro Analysis, and Consensus Meter for single-paper and multi-paper synthesis ([how Consensus works](https://consensus.app/home/blog/how-consensus-works/)). These tools are good at answering “what should I find?” and “roughly what does the literature say?” Yet once the purpose of reading shifts from awareness to research, a gap may remain: **we know the conclusion, but we still cannot see clearly how it was produced by the research design.**
+Many excellent literature-search and paper-reading prompts and Skills already exist. They can help us find papers quickly and summarize background, methods, results, and conclusions. Consensus, for example, uses keyword and semantic search over titles and abstracts, then offers features such as Study Snapshot, Ask Paper, Pro Analysis, and Consensus Meter for single-paper and multi-paper synthesis ([Consensus, 2025](https://consensus.app/home/blog/how-consensus-works/)). These tools are good at answering “what should I find?” and “roughly what does the literature say?” Yet once the purpose of reading shifts from awareness to research, a gap may remain: **we know the conclusion, but we still cannot see clearly how it was produced by the research design.**
 
 The parts of a paper that matter most for research quality are rarely concentrated in the abstract. How was an independent variable operationalized? What did participants perceive, and how was their response recorded? Where do mediators, moderators, and controls enter the model? How do raw responses become final indices? How do multiple studies progressively rule out alternative explanations? These details are scattered across the introduction, methods, results, figures, tables, appendices, and supplementary materials. Without a stable analysis route, readers repeatedly ask follow-up questions, flip between pages, and reconstruct context across multiple conversations—often ending with disconnected theory summaries, statistical notes, and method fragments.
 
@@ -64,7 +65,7 @@ The Skills can therefore support both the front end of research—proposals, rev
 
 More health, exercise, psychology, education, and management communicators now attach references to popular-science claims. This is a positive development: readers at least have a route back to the source rather than having to trust an untraceable statement.
 
-But “a paper is attached” does not guarantee that the statement matches the paper. In attention-driven environments, complex findings can be compressed into stronger headlines: correlation becomes causation, a narrow sample becomes “everyone,” statistical significance becomes a large practical benefit, and limitations disappear. Research on health-science communication has found that exaggeration in news is strongly associated with exaggeration in academic press releases, including causal claims from correlational work, unsupported advice, and direct generalization from animals to humans ([Sumner et al., 2014](https://doi.org/10.1136/bmj.g7015)). A large Twitter study found that false news traveled farther, faster, deeper, and more broadly than true news ([Vosoughi, Roy & Aral, 2018](https://doi.org/10.1126/science.aap9559)). These findings do not show that every communicator exaggerates intentionally, but they do show why striking and absolute wording may gain an advantage.
+But “a paper is attached” does not guarantee that the statement matches the paper. In attention-driven environments, complex findings can be compressed into stronger headlines: correlation becomes causation, a narrow sample becomes “everyone,” statistical significance becomes a large practical benefit, and limitations disappear. Research on health-science communication has found that exaggeration in news is strongly associated with exaggeration in academic press releases, including causal claims from correlational work, unsupported advice, and direct generalization from animals to humans ([Sumner et al., 2014](https://doi.org/10.1136/bmj.g7015)). A large Twitter study found that false news traveled farther, faster, deeper, and more broadly than true news ([Vosoughi et al., 2018](https://doi.org/10.1126/science.aap9559)). These findings do not show that every communicator exaggerates intentionally, but they do show why striking and absolute wording may gain an advantage.
 
 Health misinformation spans vaccines, diet, drugs, disease, and medical interventions across multiple social platforms, with prevalence varying by topic, platform, and method ([Suarez-Lledo & Alvarez-Galvez, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC7857950/)). Misleading information may also continue to influence reasoning after correction—the continued influence effect ([Lewandowsky et al., 2012](https://doi.org/10.1177/1529100612451018)). It is therefore safer to retain a verification step when first receiving a claim than to wait until a stable impression must be corrected.
 
@@ -143,26 +144,24 @@ The same paper can therefore produce different but semantically aligned artifact
 
 This repository uses multiple Skill directories in one collection. Keep each Skill directory intact during installation rather than copying only `SKILL.md`.
 
-> Before public release, replace `<YOUR_GITHUB_USERNAME>` with the actual GitHub username.
-
 ### Option 1: install with `npx skills`
 
 Node.js 18 or later is required. List available Skills first:
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --list
+npx skills add mohui373/paper-to-paradigm --list
 ```
 
 Install both Skills globally for Codex:
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --global --agent codex --skill '*' --yes --copy
+npx skills add mohui373/paper-to-paradigm --global --agent codex --skill '*' --yes --copy
 ```
 
 Install for all CLI-supported Agents:
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --all
+npx skills add mohui373/paper-to-paradigm --all
 ```
 
 Update globally installed Skills:
@@ -174,7 +173,7 @@ npx skills update --global --yes
 The following manual methods share one stable clone:
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/paper-to-paradigm.git
+git clone https://github.com/mohui373/paper-to-paradigm.git
 cd paper-to-paradigm
 ```
 
@@ -309,3 +308,19 @@ D. Materials, event log, data dictionary, Python analysis contract, and validati
 E. Theoretical invariants, adjustable parameters, moderator extension,
    novelty status, and pilot plan
 ```
+
+## References
+
+Consensus. (2025, June 23). *How it works & Consensus FAQ’s*. https://consensus.app/home/blog/how-consensus-works/
+
+Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N., & Cook, J. (2012). Misinformation and its correction: Continued influence and successful debiasing. *Psychological Science in the Public Interest, 13*(3), 106–131. https://doi.org/10.1177/1529100612451018
+
+Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., … Yarkoni, T. (2015). Promoting an open research culture. *Science, 348*(6242), 1422–1425. https://doi.org/10.1126/science.aab2374
+
+Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), Article aac4716. https://doi.org/10.1126/science.aac4716
+
+Suarez-Lledo, V., & Alvarez-Galvez, J. (2021). Prevalence of health misinformation on social media: Systematic review. *Journal of Medical Internet Research, 23*(1), Article e17187. https://doi.org/10.2196/17187
+
+Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., & Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. *BMJ, 349*, Article g7015. https://doi.org/10.1136/bmj.g7015
+
+Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559

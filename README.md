@@ -12,12 +12,13 @@
 - [What：目前有哪些功能](#what目前有哪些功能)
 - [Where：如何安装到不同 Agent](#where如何安装到不同-agent)
 - [How：如何调用、输入什么、得到什么](#how如何调用输入什么得到什么)
+- [参考文献](#参考文献)
 
 ## Why：为什么建立这套 Skills
 
 我本科阶段学习人力资源管理，目前是基础心理学研究生，主要研究方向包括社会与实验心理学、组织行为、道德行为与决策。这个项目最初并不是为了再做一个“论文摘要器”，而是来自我在阅读论文、开展研究和设计实验时反复遇到的一组真实问题。
 
-现在已经有很多优秀的文献检索、阅读 Prompt 和 Skill。它们能够帮助我们快速找到论文，概括背景、方法、结果与结论。例如 Consensus 会先通过标题和摘要进行关键词与语义检索，再使用 Study Snapshot、Ask Paper、Pro Analysis 和 Consensus Meter 分析单篇或综合多篇论文（[Consensus 官方工作原理](https://consensus.app/home/blog/how-consensus-works/)）。这些工具很好地解决了“找到什么”和“论文大致说了什么”，但当阅读目标从了解转向研究时，仍可能留下一个缺口：**我们知道了结论，却还没有真正看清结论是怎样从研究设计中产生的。**
+现在已经有很多优秀的文献检索、阅读 Prompt 和 Skill。它们能够帮助我们快速找到论文，概括背景、方法、结果与结论。例如 Consensus 会先通过标题和摘要进行关键词与语义检索，再使用 Study Snapshot、Ask Paper、Pro Analysis 和 Consensus Meter 分析单篇或综合多篇论文（[Consensus, 2025](https://consensus.app/home/blog/how-consensus-works/)）。这些工具很好地解决了“找到什么”和“论文大致说了什么”，但当阅读目标从了解转向研究时，仍可能留下一个缺口：**我们知道了结论，却还没有真正看清结论是怎样从研究设计中产生的。**
 
 一篇论文中最影响研究质量的内容，往往并不集中在摘要里。自变量如何操作化、因变量如何被感知和记录、中介与调节变量放在什么位置、控制变量为何需要进入模型、原始反应如何变成最终指标、多个 Study 又如何逐步排除替代解释——这些信息经常分散在引言、方法、结果、图表、附录和补充材料中。如果没有一条固定的分析路线，阅读者就需要不断补问、反复翻页，并在多轮对话中重新建立上下文；最后得到的仍可能是彼此分离的理论摘要、统计结果和方法笔记。
 
@@ -64,7 +65,7 @@
 
 现在越来越多健康、运动、心理、教育和管理领域的科普创作者会主动附上参考文献。这是一个值得肯定的变化：读者至少有机会返回来源，而不是只能相信一句无法追踪的结论。
 
-但“附有论文”并不自动等于“表述与论文完全一致”。在信息竞争激烈的平台环境中，复杂结论可能被压缩成更有传播力的标题，例如把相关关系说成因果关系、把特定样本外推到所有人、把统计显著说成效果巨大，或省略原论文的限制与不确定性。针对健康科学传播的研究也观察到，新闻中的夸大与学术新闻稿中的夸大高度相关，其中常见形式就包括从相关推到因果、给出论文并未支持的行为建议，以及把动物结果直接推广到人类（[Sumner et al., 2014](https://doi.org/10.1136/bmj.g7015)）。一项大规模 Twitter 研究发现，虚假新闻比真实新闻传播得更远、更快、更深入和更广（[Vosoughi, Roy & Aral, 2018](https://doi.org/10.1126/science.aap9559)）。这些结果不能证明每位博主都在故意夸大，却说明更醒目、更绝对的表达确实可能在传播环境中获得优势。
+但“附有论文”并不自动等于“表述与论文完全一致”。在信息竞争激烈的平台环境中，复杂结论可能被压缩成更有传播力的标题，例如把相关关系说成因果关系、把特定样本外推到所有人、把统计显著说成效果巨大，或省略原论文的限制与不确定性。针对健康科学传播的研究也观察到，新闻中的夸大与学术新闻稿中的夸大高度相关，其中常见形式就包括从相关推到因果、给出论文并未支持的行为建议，以及把动物结果直接推广到人类（[Sumner et al., 2014](https://doi.org/10.1136/bmj.g7015)）。一项大规模 Twitter 研究发现，虚假新闻比真实新闻传播得更远、更快、更深入和更广（[Vosoughi et al., 2018](https://doi.org/10.1126/science.aap9559)）。这些结果不能证明每位博主都在故意夸大，却说明更醒目、更绝对的表达确实可能在传播环境中获得优势。
 
 健康错误信息也横跨疫苗、饮食、药物、疾病和医疗干预等主题，并出现在多种社交平台；其比例随主题、平台和研究方法而变化（[Suarez-Lledo & Alvarez-Galvez, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC7857950/)）。而错误信息在被纠正后仍可能继续影响推理，即持续影响效应（continued influence effect）（[Lewandowsky et al., 2012](https://doi.org/10.1177/1529100612451018)）。与其等到形成稳定印象后再纠正，更稳妥的做法是在接收结论时就保留一次主动核验。
 
@@ -143,26 +144,24 @@
 
 本项目采用单仓库、多 Skill 目录结构；安装时请保留两个 Skill 各自的完整目录，不要只复制 `SKILL.md`。
 
-> 仓库正式发布前，请将 `<YOUR_GITHUB_USERNAME>` 替换为实际 GitHub 用户名。
-
 ### 方式一：`npx skills` 安装
 
 需要 Node.js 18 或更高版本。先查看仓库中的可安装 Skill：
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --list
+npx skills add mohui373/paper-to-paradigm --list
 ```
 
 将两个 Skill 全局安装到 Codex：
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --global --agent codex --skill '*' --yes --copy
+npx skills add mohui373/paper-to-paradigm --global --agent codex --skill '*' --yes --copy
 ```
 
 安装到 CLI 支持的所有 Agent：
 
 ```bash
-npx skills add <YOUR_GITHUB_USERNAME>/paper-to-paradigm --all
+npx skills add mohui373/paper-to-paradigm --all
 ```
 
 更新已安装 Skill：
@@ -174,7 +173,7 @@ npx skills update --global --yes
 下面三种手动安装方式共用同一个稳定仓库副本，先执行一次：
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/paper-to-paradigm.git
+git clone https://github.com/mohui373/paper-to-paradigm.git
 cd paper-to-paradigm
 ```
 
@@ -299,3 +298,19 @@ C. 原平台、PsychoPy 蓝图和无服务器降级
 D. 材料清单、事件日志、数据字典、Python 分析契约与验证
 E. 理论不变量、可调参数、组织认同扩展、创新状态与 pilot 方案
 ```
+
+## 参考文献
+
+Consensus. (2025, June 23). *How it works & Consensus FAQ’s*. https://consensus.app/home/blog/how-consensus-works/
+
+Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N., & Cook, J. (2012). Misinformation and its correction: Continued influence and successful debiasing. *Psychological Science in the Public Interest, 13*(3), 106–131. https://doi.org/10.1177/1529100612451018
+
+Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., … Yarkoni, T. (2015). Promoting an open research culture. *Science, 348*(6242), 1422–1425. https://doi.org/10.1126/science.aab2374
+
+Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), Article aac4716. https://doi.org/10.1126/science.aac4716
+
+Suarez-Lledo, V., & Alvarez-Galvez, J. (2021). Prevalence of health misinformation on social media: Systematic review. *Journal of Medical Internet Research, 23*(1), Article e17187. https://doi.org/10.2196/17187
+
+Sumner, P., Vivian-Griffiths, S., Boivin, J., Williams, A., Venetis, C. A., Davies, A., Ogden, J., Whelan, L., Hughes, B., Dalton, B., Boy, F., & Chambers, C. D. (2014). The association between exaggeration in health related science news and academic press releases: Retrospective observational study. *BMJ, 349*, Article g7015. https://doi.org/10.1136/bmj.g7015
+
+Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559
