@@ -1,7 +1,7 @@
 interface:
-  display_name: "Paper to Paradigm · 论文重组复现"
-  short_description: "面向所有读者的 Paper reconstruction，专长实验与行为研究"
-  default_prompt: "Use $paper-reconstruction / 使用 $paper-reconstruction 核对论文来源后重组实验、问卷或纵向研究，并按需适配实施平台与分析软件。"
+  display_name: "paper-reconstruction"
+  short_description: "Evidence-grounded reconstruction across study designs"
+  default_prompt: "Use $paper-reconstruction / 使用 $paper-reconstruction：根据这篇论文重建研究，建立来源账本、参与者流程、平台蓝图、数据字典与分析契约，并标注证据边界。"
 
 policy:
   allow_implicit_invocation: true
