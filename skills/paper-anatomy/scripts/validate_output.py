@@ -30,6 +30,7 @@ def main() -> int:
         "material scope": r"(?m)^##\s+文献与材料范围",
         "B4 result-to-conclusion mapping": r"(?m)^##\s+B4\.",
         "C1 evidence-to-discussion closure": r"(?m)^##\s+C1\.",
+        "C4 current-literature check": r"(?m)^##\s+C4\.",
         "final judgment": r"(?m)^##\s+最终判断",
     }
     for label, pattern in required.items():
@@ -53,6 +54,14 @@ def main() -> int:
             segment = text[begin.end(): begin.end() + finish.start()] if begin and finish else text[begin.end():] if begin else ""
             if begin and not re.search(locator_pattern, segment, re.IGNORECASE):
                 errors.append(f"{label} missing PDF page locator")
+
+    c4_start = re.search(r"(?m)^##\s+C4\.", text)
+    if c4_start:
+        c4_end = re.search(r"(?m)^##\s+(?:C5\.|最终判断)", text[c4_start.end():])
+        c4_segment = text[c4_start.end(): c4_start.end() + c4_end.start()] if c4_end else text[c4_start.end():]
+        clickable_anchor = r"\[[^\]]+\]\(https?://[^)]+\)"
+        if not re.search(clickable_anchor, c4_segment, re.IGNORECASE):
+            errors.append("C4 missing clickable scholarly field anchor")
 
     if errors:
         print("INVALID: " + "; ".join(errors))

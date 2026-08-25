@@ -220,16 +220,18 @@ def main() -> int:
         ):
             errors.append("root Chinese/English README section counts differ")
 
-    anatomy_good = """## 文献与材料范围\n- 定位模式：page-grounded\n# A. 研究叙事\n# B. 研究设计\n## B4. 核心结果到结论\n结果 [Paper: PDF p. 7, Fig. 2]\n## B5. 证据链\n# C. 结论讨论\n## C1. 数据到讨论的闭环\n解释 [Paper: PDF p. 9]\n## C2. 贡献\n## 最终判断\n判断 [Paper: PDF p. 12]\n"""
+    anatomy_good = """## 文献与材料范围\n- 定位模式：page-grounded\n# A. 研究叙事\n# B. 研究设计\n## B4. 核心结果到结论\n结果 [Paper: PDF p. 7, Fig. 2]\n## B5. 证据链\n# C. 结论讨论\n## C1. 数据到讨论的闭环\n解释 [Paper: PDF p. 9]\n## C2. 贡献\n## C4. 当代近况检查\n领域锚点：[示例综述](https://doi.org/10.0000/example)\n## 最终判断\n判断 [Paper: PDF p. 12]\n"""
     anatomy_bad = anatomy_good + "# D. 材料与程序\n"
-    reconstruction_good = """# A. 论文重组复现目标\n## A0. 复现来源账本\n主论文 DOI：未发现\n# B. 被试视角流程\n## B0. 任务关系图\n# C. 程序蓝图\n## C0. 原始平台识别\n# D. 材料数据\n## D3. 数据字典\n## D4. 分析复现管线\n# E. 实验参数沉淀\n## 复现行动顺序\n## 可编辑反馈表\n"""
-    reconstruction_bad = reconstruction_good.replace("## D3. 数据字典\n", "")
+    anatomy_missing_c4 = anatomy_good.replace("## C4. 当代近况检查\n领域锚点：[示例综述](https://doi.org/10.0000/example)\n", "")
+    reconstruction_good = """# A. 论文重组复现目标\n## A0. 复现来源账本\n主论文 DOI：未发现\n# B. 被试视角流程\n## B0. 任务关系图\n# C. 程序蓝图\n## C0. 原始平台识别\n## C5. 原文数据分析路线\n# D. 材料数据\n## D1. 来源、材料与复现状态\n## D2. 最小数据字段\n## D3. 复现验证与差异处理\n# E. 实验参数沉淀\n## E2. 理论与文献锚点\n## E4. 有理论支撑的优先研究 idea\n证据起点：原文限制\n证据状态：部分支持\n## 复现行动顺序\n## 可编辑反馈表\n"""
+    reconstruction_bad = reconstruction_good.replace("## D2. 最小数据字段\n", "")
 
     validator_cases = [
         ("paper-anatomy valid", SKILLS / "paper-anatomy/scripts/validate_output.py", anatomy_good, 0),
         ("paper-anatomy rejects reconstruction section", SKILLS / "paper-anatomy/scripts/validate_output.py", anatomy_bad, 1),
+        ("paper-anatomy rejects missing C4", SKILLS / "paper-anatomy/scripts/validate_output.py", anatomy_missing_c4, 1),
         ("paper-reconstruction valid", SKILLS / "paper-reconstruction/scripts/validate_output.py", reconstruction_good, 0),
-        ("paper-reconstruction rejects missing D3", SKILLS / "paper-reconstruction/scripts/validate_output.py", reconstruction_bad, 1),
+        ("paper-reconstruction rejects missing D2", SKILLS / "paper-reconstruction/scripts/validate_output.py", reconstruction_bad, 1),
     ]
     for label, script, content, expected_code in validator_cases:
         if not script.is_file():

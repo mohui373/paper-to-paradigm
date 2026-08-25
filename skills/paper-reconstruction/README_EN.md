@@ -70,7 +70,7 @@ R receives scripts/Quarto, `renv`, and `sessionInfo()`; Python receives scripts/
 4. Route experiments, surveys, longitudinal, interactive, and field studies to their actual participant/respondent flow.
 5. Select an implementation platform only when implementation is required; preserve original-platform evidence and migration differences.
 6. Select an analysis environment only when analysis artifacts are required; otherwise keep the contract platform-neutral.
-7. Connect materials, event/survey logs, stable IDs, data dictionaries, analysis fields, and validation tests.
+7. Reconstruct the paper's actual analysis route in C5 first; then connect source/material status, minimum data fields, and validation without replacing analysis with generic material packs or log tables.
 8. Run the E-Prime bundle auditor or cross-platform plan validator.
 9. Separate paper evidence, later evidence, user ideas, and untested decisions when extending a study.
 10. Deliver applicable ABCDE sections and minimum sufficient artifacts with an honest runtime state.
@@ -109,9 +109,9 @@ Missing material does not end the task. The Skill labels paper-explicit, supplem
 |---|---|---|
 | **A. Target and evidence** | What is being replicated, and are sources complete? | ledger, theory, Studies, variables, indices, models, table/figure mapping |
 | **B. Participant/respondent flow** | What is actually experienced? | task relationships, screens/steps, backend actions, waves, matching, saved data |
-| **C. Program and field protocol** | How does it run? | original and target native components, survey logic, social reality, synchronization, fallbacks, logs |
-| **D. Materials, data, and analysis reproduction** | How do materials reach analysis? | material ledger, data dictionary, target-software pipeline, code/settings, validation |
-| **E. Parameter transfer and development** | What can be extended? | parameter cards, theory anchors, later evidence, new questions, novelty status, pilots |
+| **C. Program and field protocol** | How does it run and analyze? | original and target native components, survey logic, social reality, synchronization, fallbacks, logs, and the **paper's actual analysis route** |
+| **D. Materials, data, and analysis reproduction** | How is it handed off and verified? | source/material status, minimum data fields, version conflicts, paper-to-output differences, and validation |
+| **E. Parameter transfer and development** | What can be extended? | parameter cards, theory anchors, evidence-chain gaps, and source-bounded new ideas |
 
 ## Runtime and dependencies
 

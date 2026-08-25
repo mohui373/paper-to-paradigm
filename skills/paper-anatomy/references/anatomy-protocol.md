@@ -87,7 +87,7 @@ For social-interaction, deception, simulated-agent, vignette, identity, exclusio
 
 ### 4.2 Study coverage
 
-For each Study report: sample; assignment; participant-visible sequence; manipulation/conditions; measures; exclusions; analysis; result; role in the paper. Use a Mermaid relation map when phases or branches are nontrivial.
+For each Study report: sample; assignment; participant-visible sequence; manipulation/conditions; measures; exclusions; analysis; result; role in the paper. If a paper uses several task versions, cohorts, arms, or control samples, distinguish **between-sample assignment** from **within-person conditions** and state recoverable block/trial/wave counts. Use a Mermaid relation map when phases or branches are nontrivial.
 
 ### 4.3 Variables and analysis
 
@@ -129,7 +129,14 @@ Identify the strongest contribution, unresolved inconsistency, external-validity
 
 ## 6. Current-Literature Check
 
-For papers older than three years, browse by default and conduct an extended check yielding about five representative sources. Search in this order when accessible:
+Always complete C4, regardless of the focal paper's publication year. C4 is not merely an "old-paper update"; it anchors the paper in its field, identifies subsequent developments where available, and calibrates whether the stated gap remains a genuine research question. A recent publication year is never a reason to omit C4.
+
+Browse scholarly sources by default and record a compact query logic plus clickable DOI, publisher, repository, or database links. Choose the depth by publication age:
+
+- **Recent paper (published within the past three years):** provide **3–5 focused field anchors**. Together they should locate the paper's field context, identify closely related evidence or methodological development, and state a live boundary, tension, or unresolved question. These sources may pre-date or post-date the focal paper when necessary to establish its field position; do not pretend that every recent paper already has direct replications.
+- **Older paper (published more than three years ago):** provide an **extended check of at least about five representative sources**, covering later development, replication or synthesis, methodological/paradigm improvement, and contradictory or boundary-condition evidence where available.
+
+For the extended route, search in this order when accessible:
 
 1. Reviews/meta-analyses and direct replications.
 2. Later empirical variants addressing the original limitation.
@@ -137,9 +144,9 @@ For papers older than three years, browse by default and conduct an extended che
 4. Open materials/data/code useful for follow-up.
 5. Strong contradictory or boundary-condition evidence.
 
-Try Google Scholar and APA PsycNet when accessible, but never claim access if blocked. Use publisher pages, Crossref, Semantic Scholar, PubMed, OSF, repositories, and cited references as fallbacks. Record brief query logic and give clickable DOI/publisher/repository links.
+Try Google Scholar and APA PsycNet when accessible, but never claim access if blocked. Use publisher pages, Crossref, Semantic Scholar, PubMed, OSF, repositories, and cited references as fallbacks.
 
-For recent papers, browse when the user asks about current status, when novelty is evaluated, or when external literature is needed to interpret the claim.
+If scholarly browsing is genuinely unavailable, retain C4 and label it `外部检索不可用 / external search unavailable`; give the intended query logic and retrieval sources, and do not claim a current consensus, a confirmed research gap, or an up-to-date field position. Never replace missing external evidence with an unsupported boundary statement.
 
 ## 7. Concision
 

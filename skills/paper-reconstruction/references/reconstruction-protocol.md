@@ -27,6 +27,8 @@ For model-bearing theories, inspect the focal paper's in-text citations and dist
 
 Begin with `B0. 任务关系图`. Show Study, scenario, block, trial, round, role, practice, condition, and backend logic as serial, crossed, nested, repeated, or parallel. Use Mermaid for reusable structure.
 
+When a paper has multiple task versions, cohorts, arms, or control samples, mark **sample assignment** separately from **within-person repetition**. State the expected number of blocks, trials, or waves per version when the design makes it recoverable. Never call two independently recruited versions “within-subject” merely because each version contains repeated conditions.
+
 For each screen or protocol step report:
 
 ```text
@@ -98,7 +100,19 @@ Only include fields relevant to the study.
 
 Before delivery, cross-check that every field logged by the program exists in the data dictionary and every field required by the analysis is either logged or has a declared derivation. For structured bundles, run `scripts/audit_replication_bundle.py`.
 
-## 5. D: Materials, Data, and Analysis Reproduction
+## 5. C5 and D: Analysis, Materials, Data, and Verification
+
+Put the paper's **actual analysis route** in C5: analysis environment, model family, outcome, predictors, random/repeated structure, estimand or contrasts, correction, and the table/figure it should reproduce. Do not replace this with a generic event-log table or silently substitute a preferred method such as R, regression, or mediation.
+
+Use D for the handoff after analysis has been specified:
+
+```text
+D1 source/material status and what it can support
+-> D2 minimum data fields / dictionary needed to run the stated analysis
+-> D3 validation, source-conflict resolution, and runtime/analysis difference handling
+```
+
+Only add a standalone self-built materials package when the user requests implementation artifacts or it is necessary to close a documented material gap. Do not generate a generic list of invented files merely to occupy D2.
 
 Turn gaps into actions:
 
@@ -121,7 +135,17 @@ Read `analysis-environment.md` whenever analysis artifacts are needed. Read `r-r
 
 Extract manipulable paradigm parameters: information, role, agency, timing, social reality, stakes, feedback, observability, response, and outcome.
 
-Anchor ideas in at least two sources: paradigm structure, stated limitation, detected limitation, theory, adjacent research, or user direction. User fit is optional, not the default generator.
+Build each priority idea as an evidence chain, not an inspiration list:
+
+```text
+paper limitation or reusable paradigm structure
+-> named theory and/or later scholarly evidence
+-> remaining uncertainty
+-> falsifiable research question and compact design
+-> evidence status and boundary
+```
+
+Each idea needs at least two traceable anchors. A strong minimum is one paper-specific anchor plus one named theory or later scholarly source with a clickable link; user direction can refine relevance but does not replace evidence. State whether the support is `已检索确认`, `部分支持`, or `待检索确认`. Treat cross-sectional mediation, adjacent tasks, and review claims as bounded evidence rather than proof of the focal paper's mechanism.
 
 For papers older than three years, browse and return about five representative later sources covering reviews, replications, variants, method improvements, contradictory evidence, or open materials. Mark ideas as `已检索确认`, `部分支持`, or `待检索确认`. Do not claim a publishable gap from a superficial search.
 

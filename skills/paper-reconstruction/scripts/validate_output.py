@@ -31,8 +31,11 @@ def validate_current(text: str) -> list[str]:
         "A0 replication source ledger": r"(?m)^##\s+A0\.",
         "B0 task map": r"(?m)^##\s+B0\.",
         "C0 platform identification": r"(?m)^##\s+C0\.",
-        "D3 data dictionary": r"(?m)^##\s+D3\.",
-        "D4 analysis pipeline": r"(?m)^##\s+D4\.",
+        "C5 paper analysis route": r"(?m)^##\s+C5\.",
+        "D2 minimum data fields": r"(?m)^##\s+D2\.",
+        "D3 validation and difference handling": r"(?m)^##\s+D3\.",
+        "E2 theory and literature anchors": r"(?m)^##\s+E2\.",
+        "E4 evidence-supported research ideas": r"(?m)^##\s+E4\.",
         "action order": r"(?m)^##\s+复现行动顺序",
         "feedback table": r"(?m)^##\s+可编辑反馈表",
     }
@@ -43,6 +46,15 @@ def validate_current(text: str) -> list[str]:
         r"已读取|可访问未读取|发现但受限|未发现|链接失效", text
     ):
         errors.append("A0 source ledger missing an access-status value")
+    e4_start = re.search(r"(?m)^##\s+E4\.", text)
+    if e4_start:
+        e4_segment = text[e4_start.end():]
+        evidence_marker = r"证据起点|理论依据|理论命题|理论或相邻文献|evidence start|theoretical basis"
+        status_marker = r"已检索确认|部分支持|待检索确认|evidence-supported|partially supported|search-verified"
+        if not re.search(evidence_marker, e4_segment, re.IGNORECASE):
+            errors.append("E4 research ideas missing an explicit evidence or theory marker")
+        if not re.search(status_marker, e4_segment, re.IGNORECASE):
+            errors.append("E4 research ideas missing an evidence-status marker")
     return errors
 
 

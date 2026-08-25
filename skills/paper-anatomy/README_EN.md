@@ -14,7 +14,7 @@ Use `paper-anatomy` when a normal abstract no longer answers the question. It ca
 - map models, comparisons, and figures to hypotheses and separate significance, proposition support, and generalizability;
 - route experiments, surveys, longitudinal and qualitative studies, theory papers, reviews, meta-analysis, bibliometrics, Delphi, consensus, and guidelines differently;
 - compare an online claim with its cited paper and classify it as aligned, partly aligned, overstated, unsupported, or unresolved;
-- retrieve representative replications, reviews, method improvements, contradictions, and boundary conditions when needed.
+- always complete C4, the field-position check: recent papers receive 3–5 focused scholarly anchors, while older papers receive an extended check of about five or more sources covering development, replication, correction, or controversy.
 
 ## Workflow: from research story to evidence boundary
 
@@ -25,7 +25,7 @@ Use `paper-anatomy` when a normal abstract no longer answers the question. It ca
 5. Rebuild each Study or evidence-production stage, connecting participants/materials, measures, variables, processing, models, and results.
 6. Map statistical evidence -> supported proposition -> conclusions that cannot be inferred.
 7. Audit how the discussion closes the story, separating interpretation, contribution, generalization, and alternatives.
-8. Verify public claims or later evidence when requested, then deliver an ABC report with compact source pointers.
+8. Complete the mandatory C4 field-position check with clickable scholarly links, then deliver an ABC report with compact source pointers; a recent paper never skips C4.
 
 ## Typical requests
 
@@ -61,13 +61,13 @@ Check waves, attrition, measurement, lagged models, and causal language.
 |---|---|---|
 | **A. Research narrative and theoretical position** | What problem is the paper trying to solve? | one-sentence answer, story line, theory sources, literature chain, gap/dispute, hypotheses, Study map |
 | **B. Research design, measurement, and evidence** | How was evidence produced? | participant flow, variables, measures, raw-to-index path, models, results, figures, result-to-conclusion chain |
-| **C. Conclusions, discussion, contribution, and field position** | What does the paper actually support? | grounded conclusions, discussion closure, contribution, limitations, alternatives, generalization, later evidence, judgment |
+| **C. Conclusions, discussion, contribution, and field position** | What does the paper actually support? | grounded conclusions, discussion closure, contribution, limitations, alternatives, generalization, mandatory C4 field anchors, and judgment |
 
 Key claims in B4, C1, and the final judgment point to exact locations such as `[Paper: PDF p. 7, Fig. 2]`. The page/section/figure/table inventory remains a sidecar so it does not crowd out interpretation.
 
 ## Runtime and dependencies
 
-- Reading requires access to paper text or PDF; locating later evidence requires internet access.
+- Reading requires access to paper text or PDF. C4 is mandatory for every paper: recent papers use 3–5 focused scholarly anchors, while older papers receive an extended check of about five or more development, replication, correction, or controversy sources. Each anchor has a clickable scholarly link; if browsing is genuinely unavailable, C4 remains and explicitly reports that limitation rather than claiming a current field conclusion.
 - PDF source preparation requires Python 3 and `pypdf`; `pdfplumber` adds caption and image coordinates; `--render-pages` also requires `pdftoppm`.
 - The repository includes a programmatically generated synthetic PDF with no real paper or participant data. CI exercises pages, sections, Figure/Table captions, DOI, links, embedded images, and `--no-text` output.
 - Output-contract validation uses only the Python standard library.
