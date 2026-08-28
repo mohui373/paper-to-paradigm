@@ -376,9 +376,13 @@ Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news onli
 
 ## ⭐ Star 历史
 
-<p align="center">
-  <a href="https://www.star-history.com/#mohui373/paper-to-paradigm&amp;Date"><img src="https://api.star-history.com/svg?repos=mohui373/paper-to-paradigm&amp;type=Date" alt="paper-to-paradigm Star History Chart"></a>
-</p>
+<a href="https://www.star-history.com/?type=date&repos=mohui373%2Fpaper-to-paradigm">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=mohui373/paper-to-paradigm&type=date&theme=dark&legend=top-left&sealed_token=7Vau1_vUcEV-RV6Vn4dqHPsoUAasC3IPKulxa3mtOBXBppbv4VwJgxRp4HxdkJFtsd_d46ygZ4-xNzNt98xGA09yDO4GWeOV9vIrKt1ct18rcRHEnjVKK1gO3XFk6Yj3pf5NE6tjlJHiba3DgyJlZBLd464CUra5dzSfOwlmFdssHZgEpAlrgF1bkZ6f" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=mohui373/paper-to-paradigm&type=date&legend=top-left&sealed_token=7Vau1_vUcEV-RV6Vn4dqHPsoUAasC3IPKulxa3mtOBXBppbv4VwJgxRp4HxdkJFtsd_d46ygZ4-xNzNt98xGA09yDO4GWeOV9vIrKt1ct18rcRHEnjVKK1gO3XFk6Yj3pf5NE6tjlJHiba3DgyJlZBLd464CUra5dzSfOwlmFdssHZgEpAlrgF1bkZ6f" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=mohui373/paper-to-paradigm&type=date&legend=top-left&sealed_token=7Vau1_vUcEV-RV6Vn4dqHPsoUAasC3IPKulxa3mtOBXBppbv4VwJgxRp4HxdkJFtsd_d46ygZ4-xNzNt98xGA09yDO4GWeOV9vIrKt1ct18rcRHEnjVKK1gO3XFk6Yj3pf5NE6tjlJHiba3DgyJlZBLd464CUra5dzSfOwlmFdssHZgEpAlrgF1bkZ6f" />
+ </picture>
+</a>
 
 <p align="center">
   <a href="https://github.com/mohui373/paper-to-paradigm/stargazers"><img src="https://img.shields.io/github/stars/mohui373/paper-to-paradigm?style=for-the-badge&amp;logo=github&amp;label=GitHub%20Stars&amp;color=F5B700" alt="GitHub stars"></a>
