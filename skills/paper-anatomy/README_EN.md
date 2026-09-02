@@ -63,7 +63,7 @@ Check waves, attrition, measurement, lagged models, and causal language.
 | **B. Research design, measurement, and evidence** | How was evidence produced? | participant flow, variables, measures, raw-to-index path, models, results, figures, result-to-conclusion chain |
 | **C. Conclusions, discussion, contribution, and field position** | What does the paper actually support? | grounded conclusions, discussion closure, contribution, limitations, alternatives, generalization, mandatory C4 field anchors, and judgment |
 
-Key claims in B4, C1, and the final judgment point to exact locations such as `[Paper: PDF p. 7, Fig. 2]`. The page/section/figure/table inventory remains a sidecar so it does not crowd out interpretation.
+For a PDF, the Skill first builds a two-level index: it separates a standalone paper from individual papers in proceedings or another collection, then locates each paper's **abstract, introduction and theory, research design, results and data analysis, and discussion and value**. A user-specified paper is selected by ordinal, DOI, or a unique title phrase; if none is specified, all detected papers are read by default. Key claims in B4, C1, and the final judgment point to exact locations such as `[Paper: PDF p. 7, Fig. 2]`. The full index remains in `source_bundle.json` so it does not crowd out interpretation.
 
 ## Runtime and dependencies
 
@@ -83,7 +83,7 @@ Key claims in B4, C1, and the final judgment point to exact locations such as `[
 | [`claim-verification.md`](references/claim-verification.md) | public claim -> paper evidence -> generalization boundary -> judgment |
 | [`output-contract.md`](references/output-contract.md) | full ABC report fields |
 | [`scoring-rubric.md`](references/scoring-rubric.md) | quality scoring and revision feedback |
-| [`prepare_paper.py`](scripts/prepare_paper.py) | page/section/figure/table/image/link/material-scope bundle |
+| [`prepare_paper.py`](scripts/prepare_paper.py) | standalone/collection detection, per-paper boundaries, five-part reading index, figures, tables, links, and material scope |
 | [`synthetic_paper.pdf`](../../tests/fixtures/synthetic_paper.pdf) | copyright-free synthetic source-grounding fixture |
 | [`validate_output.py`](scripts/validate_output.py) | ABC structure and PDF-locator validation |
 | [`evals.json`](evals/evals.json) | full paper, abstract-only, missing Supplement, contradictory evidence cases |

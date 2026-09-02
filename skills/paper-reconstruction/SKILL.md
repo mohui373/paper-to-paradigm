@@ -21,28 +21,30 @@ description: "For all readers, with a specialty in experimental and behavioral r
 ## 按需加载
 
 1. 每次读取 `references/reconstruction-protocol.md`。
-2. 每次读取 `references/replication-source-ledger.md`，逐项检查 DOI、附录、Supplement、OSF、预注册、数据、代码、材料及更正信息。
-3. 每次读取 `references/replication-deliverables.md`，先确定概念/程序/统计/直接复制层级并选择最小充分产物。
-4. 需要程序复现、直接复制或平台迁移时，读取 `references/platform-selection.md`；目标不是 E-Prime 时再读取 `references/platform-adapters.md`。
-5. 横断问卷、纵向/多波、组织档案链接或问卷平台任务，读取 `references/survey-longitudinal-path.md` 和 `references/domain-adaptation.md`。
-6. 需要统计复现、分析代码或分析接口时，读取 `references/analysis-environment.md`；只有用户选择 R 时才读取 `references/r-reproducibility-guide.md`。
-7. 涉及组织行为、社会互动、行为决策、健康/运动、教育/HCI、现场研究或跨领域迁移时，读取 `references/domain-adaptation.md`。
-8. 目标平台为 E-Prime，或需要判断 Proc/List、串联/交错/嵌套重复与运行状态时，读取 `references/eprime-execution-path.md`，并复制 `assets/eprime-starter/` 作为结构起点。
-9. 正式报告或保存 Markdown 时，读取 `references/output-contract.md`。
+2. 收到 PDF 时读取 `../paper-anatomy/references/source-grounding.md`，并运行共享的 `../paper-anatomy/scripts/prepare_paper.py`；不要在本 Skill 内复制另一份索引脚本。
+3. 每次读取 `references/replication-source-ledger.md`，逐项检查 DOI、附录、Supplement、OSF、预注册、数据、代码、材料及更正信息。
+4. 每次读取 `references/replication-deliverables.md`，先确定概念/程序/统计/直接复制层级并选择最小充分产物。
+5. 需要程序复现、直接复制或平台迁移时，读取 `references/platform-selection.md`；目标不是 E-Prime 时再读取 `references/platform-adapters.md`。
+6. 横断问卷、纵向/多波、组织档案链接或问卷平台任务，读取 `references/survey-longitudinal-path.md` 和 `references/domain-adaptation.md`。
+7. 需要统计复现、分析代码或分析接口时，读取 `references/analysis-environment.md`；只有用户选择 R 时才读取 `references/r-reproducibility-guide.md`。
+8. 涉及组织行为、社会互动、行为决策、健康/运动、教育/HCI、现场研究或跨领域迁移时，读取 `references/domain-adaptation.md`。
+9. 目标平台为 E-Prime，或需要判断 Proc/List、串联/交错/嵌套重复与运行状态时，读取 `references/eprime-execution-path.md`，并复制 `assets/eprime-starter/` 作为结构起点。
+10. 正式报告或保存 Markdown 时，读取 `references/output-contract.md`。
 
 ## 工作流
 
 1. 确认论文版本、目标 Study 和复现层级：概念、程序、统计或直接复制；不要为无关产物询问平台。
-2. 建立复现来源账本：规范化 DOI，逐项记录正文、附录、Supplement、OSF、预注册、数据、代码与材料的链接、版本、访问状态和读取范围。
-3. 提取研究问题、理论来源、核心发现、变量、指标、模型和图表对应关系；若已有 `paper-anatomy` 的 `source_bundle.json`，复用其页码与链接候选。
-4. 判定实验、问卷、纵向、互动或现场研究类型；为每个 Study 建立参与者/受访者流程，纵向研究增加波次、匿名匹配、提醒和流失状态。
-5. 只有需要程序复现、直接复制或迁移时才解析目标实施平台：用户已说明则采用；否则按研究类型询问一次。计算机化行为实验未回答时声明默认 E-Prime 3.0；问卷/纵向未回答时保持平台中立。
-6. 识别原平台或现场协议，按目标平台输出原生组件、文件、随机化、设备/同步、日志、运行状态和迁移差异；社会互动要明确真人、延迟、主试控制、预生成或虚构。
-7. 只有需要分析代码、统计复现或分析接口时才解析分析环境：已说明则采用；否则询问一次。未回答时输出平台中立分析契约，不默认 R。
-8. 在确有实施需求时重建材料清单；随后闭合事件/问卷日志、稳定 ID、数据字段、**原文分析路线**与验证测试。不要为了填充模板生成泛化的“自建材料包”；来源冲突必须进入验证计划。
-9. 对 E-Prime bundle 运行 `scripts/audit_replication_bundle.py`；对其他平台的结构化计划运行 `scripts/validate_platform_plan.py`，保持组件、流程、字段和分析语义统一。
-10. 用户提出新想法时，先写出“原文限制或范式结构 → 理论/相邻文献 → 可检验问题”，再给设计；每个优先 idea 至少有两个可追溯支点（如原文限制 + 后续文献，或理论 + 相邻实证），并标为 `已检索确认`、`部分支持` 或 `待检索确认`。不得把未检索的灵感写成领域空白。
-11. 按适用的 ABCDE 部分交付；最小交付优先，保存为正式 Markdown 或结构化包时运行对应校验器。
+2. 输入为 PDF 时先生成 `source_bundle.json` 并读取 `document_index`：区分单篇论文与会议集/论文集，为每篇确认标题和起止页，并定位摘要、前言与理论、研究设计、结果与数据处理、讨论与文章价值。用户指定文章时用 `--article` 按序号、`paper_id`、DOI 或唯一标题短语精确选择；未指定时默认处理索引中的全部论文。选择不唯一时停止并要求更精确目标，不猜测。
+3. 建立复现来源账本：规范化 DOI，逐项记录所选论文正文、附录、Supplement、OSF、预注册、数据、代码与材料的链接、版本、访问状态和读取范围。
+4. 提取研究问题、理论来源、核心发现、变量、指标、模型和图表对应关系；复用 `source_bundle.json` 的目标论文页码、图表和链接候选，但不把索引全文写进 ABCDE 报告。
+5. 判定实验、问卷、纵向、互动或现场研究类型；为每个 Study 建立参与者/受访者流程，纵向研究增加波次、匿名匹配、提醒和流失状态。
+6. 只有需要程序复现、直接复制或迁移时才解析目标实施平台：用户已说明则采用；否则按研究类型询问一次。计算机化行为实验未回答时声明默认 E-Prime 3.0；问卷/纵向未回答时保持平台中立。
+7. 识别原平台或现场协议，按目标平台输出原生组件、文件、随机化、设备/同步、日志、运行状态和迁移差异；社会互动要明确真人、延迟、主试控制、预生成或虚构。
+8. 只有需要分析代码、统计复现或分析接口时才解析分析环境：已说明则采用；否则询问一次。未回答时输出平台中立分析契约，不默认 R。
+9. 在确有实施需求时重建材料清单；随后闭合事件/问卷日志、稳定 ID、数据字段、**原文分析路线**与验证测试。不要为了填充模板生成泛化的“自建材料包”；来源冲突必须进入验证计划。
+10. 对 E-Prime bundle 运行 `scripts/audit_replication_bundle.py`；对其他平台的结构化计划运行 `scripts/validate_platform_plan.py`，保持组件、流程、字段和分析语义统一。
+11. 用户提出新想法时，先写出“原文限制或范式结构 → 理论/相邻文献 → 可检验问题”，再给设计；每个优先 idea 至少有两个可追溯支点（如原文限制 + 后续文献，或理论 + 相邻实证），并标为 `已检索确认`、`部分支持` 或 `待检索确认`。不得把未检索的灵感写成领域空白。
+12. 按适用的 ABCDE 部分交付；`source_bundle.json` 始终作为本地定位侧车，不新增索引章节、不粘贴逐页文本，只在报告中保留目标范围和必要的页码/图表来源指针。最小交付优先，保存为正式 Markdown 或结构化包时运行对应校验器。
 
 ## ABCDE 输出契约
 

@@ -169,5 +169,52 @@ def build_pdf(output: Path) -> None:
     pdf.save()
 
 
+def build_proceedings_pdf(output: Path) -> None:
+    """Build a two-paper proceedings fixture for article-boundary tests."""
+    output.parent.mkdir(parents=True, exist_ok=True)
+    pdf = canvas.Canvas(str(output), pagesize=letter, invariant=1, pageCompression=1)
+    pdf.setTitle("Synthetic Two-Paper Proceedings")
+    pdf.setAuthor("paper-to-paradigm test generator")
+
+    def first_page(title: str, doi: str, paper_number: int) -> None:
+        pdf.setFillColor(colors.HexColor("#173B57"))
+        pdf.setFont("Helvetica-Bold", 19)
+        pdf.drawString(54, 730, title)
+        pdf.setFont("Helvetica", 10)
+        pdf.drawString(54, 706, f"Synthetic Author {paper_number}")
+        y = draw_heading(pdf, "Abstract", 670)
+        y = draw_lines(pdf, ["A generated abstract for deterministic proceedings indexing.", f"DOI: {doi}"], y)
+        y = draw_heading(pdf, "1. Introduction", y - 10)
+        draw_lines(pdf, ["A synthetic theoretical rationale with no scientific claims."], y)
+
+    first_page("First Synthetic Proceedings Paper", "10.12345/synthetic.proceedings.1", 1)
+    draw_footer(pdf, 1)
+    pdf.showPage()
+    y = draw_heading(pdf, "2. Methods", 730)
+    y = draw_lines(pdf, ["The design uses generated labels and no participants."], y)
+    y = draw_heading(pdf, "3. Results", y - 12)
+    y = draw_lines(pdf, ["All values are synthetic."], y)
+    y = draw_heading(pdf, "4. Discussion", y - 12)
+    draw_lines(pdf, ["The paper exists only to test indexing."], y)
+    draw_footer(pdf, 2)
+    pdf.showPage()
+
+    first_page("Second Synthetic Proceedings Paper", "10.12345/synthetic.proceedings.2", 2)
+    draw_footer(pdf, 3)
+    pdf.showPage()
+    y = draw_heading(pdf, "2. Research Design", 730)
+    y = draw_lines(pdf, ["The design is another generated fixture."], y)
+    y = draw_heading(pdf, "3. Data Analysis", y - 12)
+    y = draw_lines(pdf, ["No inferential claim is made."], y)
+    y = draw_heading(pdf, "4. Conclusions", y - 12)
+    draw_lines(pdf, ["The second paper closes the synthetic collection."], y)
+    draw_footer(pdf, 4)
+    pdf.showPage()
+    y = draw_heading(pdf, "Author Index", 730)
+    draw_lines(pdf, ["Synthetic Author 1", "Synthetic Author 2"], y)
+    draw_footer(pdf, 5)
+    pdf.save()
+
+
 if __name__ == "__main__":
     build_pdf(Path(__file__).with_name("synthetic_paper.pdf"))

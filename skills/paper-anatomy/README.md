@@ -74,7 +74,7 @@ $paper-anatomy 某博主引用这篇论文声称“这种运动对所有成年�
 | **B. 研究设计、测量与证据** | 证据究竟怎样产生？ | 被试/资料流程、操纵与测量、变量角色、数据处理、统计方法及结果—结论映射 |
 | **C. 结论、讨论与领域位置** | 论文真正增加了什么，又能说到哪里？ | 数据—讨论闭环、理论/方法/实证贡献、限制、所有论文必做的 C4 领域锚定，以及校准后的剩余问题 |
 
-当提供 PDF 时，B4、C1 和最终判断会用 `[Paper: PDF p. 7, Fig. 2]` 一类短指针定位结论。页码、章节、图表、图片和材料范围的完整清单单独保存在 `source_bundle.json`，不会挤压 ABC 主报告；若只有摘要，则明确标为 `source-limited`，不猜页码。
+当提供 PDF 时，Skill 会先建立两层索引：先区分单篇论文与会议集/论文集中的各篇论文，再为每篇定位**摘要、前言与理论、研究设计、结果与数据处理、讨论与文章价值**。用户指定文章时按序号、DOI 或唯一标题短语精确选择；未指定时默认阅读全部论文。B4、C1 和最终判断会用 `[Paper: PDF p. 7, Fig. 2]` 一类短指针定位结论。完整索引单独保存在 `source_bundle.json`，不会挤压 ABC 主报告；若只有摘要，则明确标为 `source-limited`，不猜页码。
 
 报告不会只复述段落，而会尽量形成几条可以检查的链条：
 
@@ -104,7 +104,7 @@ $paper-anatomy 某博主引用这篇论文声称“这种运动对所有成年�
 | [`claim-verification.md`](references/claim-verification.md) | 核验博主、新闻、科普或社交媒体主张与原论文是否一致 |
 | [`output-contract.md`](references/output-contract.md) | 需要完整结构化报告或保存 Markdown 时确定必填字段 |
 | [`scoring-rubric.md`](references/scoring-rubric.md) | 用户要求评分、质量检查或修改建议时 |
-| [`prepare_paper.py`](scripts/prepare_paper.py) | 从 PDF 生成页码、章节、图表、图片和材料范围侧车清单 |
+| [`prepare_paper.py`](scripts/prepare_paper.py) | 区分单篇/论文集，按论文边界和五类核心章节建立页码索引，并生成图表、图片、链接与材料范围侧车清单 |
 | [`synthetic_paper.pdf`](../../tests/fixtures/synthetic_paper.pdf) | 无版权合成 PDF，用于验证来源定位脚本而不公开真实论文 |
 | [`validate_output.py`](scripts/validate_output.py) | 对已保存的 Markdown 解剖报告执行结构校验 |
 | [`evals.json`](evals/evals.json) | 回归检查完整论文、摘要不足、Supplement 缺失和矛盾证据 |

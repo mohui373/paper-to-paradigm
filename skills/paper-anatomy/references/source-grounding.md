@@ -12,6 +12,14 @@
 python scripts/prepare_paper.py PAPER.pdf -o source_bundle.json
 ```
 
+若 PDF 是会议集、论文集或合订本，并且用户指定了其中一篇，可用论文序号、`paper_id`、DOI 或唯一标题短语选择：
+
+```bash
+python scripts/prepare_paper.py PROCEEDINGS.pdf -o source_bundle.json --article "HyperCare"
+```
+
+可重复使用 `--article` 选择多篇。没有提供 `--article` 时，脚本将 `selection.mode` 记为 `all_default`，后续默认阅读识别出的全部论文；选择词不存在或同时命中多篇时立即报错，不猜测目标。
+
 需要逐页视觉检查时可增加：
 
 ```bash
@@ -19,6 +27,23 @@ python scripts/prepare_paper.py PAPER.pdf -o source_bundle.json --render-pages r
 ```
 
 `--render-pages` 需要系统可调用 `pdftoppm`。文本提取依赖 `pypdf`，精确坐标和内嵌图片清单优先使用 `pdfplumber`。
+
+## 合格索引的读取顺序
+
+先读取 `document_index`，不要先把 `pages[].text` 全部送入模型：
+
+1. 查看 `document_type` 与 `paper_count`，先判断是单篇论文还是多论文集合；`front_matter` 与 `back_matter` 单独记录目录、序言或作者索引等集合级页面，不把它们误算进某篇论文。
+2. 对会议集/论文集，核对每个 `paper_id`、标题、DOI 候选和起止 PDF 页；按用户指定目标读取，未指定则依次读取全部论文。
+3. 对每篇论文查看 `canonical_sections`，按固定顺序定位：
+   - `abstract`：摘要；
+   - `introduction_theory`：前言、研究背景、理论与文献综述；
+   - `research_design`：研究设计、方法、样本、程序、材料与测量；
+   - `results_analysis`：结果、数据处理与统计分析；
+   - `discussion_value`：讨论、结论、贡献、启示、局限与文章价值。
+4. 只把当前分析所需的页码范围从 `pages` 带入上下文；需要核对图表时再加载对应页及相邻解释页。
+5. 某一类显示 `not_detected` 时，表示自动索引没有识别到明确标题，不等于论文没有该内容。此时检查 `raw_sections`、页面文本或渲染页，并在报告中说明人工校正。
+
+`document_index` 是导航层，不是论文摘要，也不替代逐页证据核查。自动识别依赖版面标题；扫描件、非常规排版或没有 Abstract 标题的论文集需要 OCR 或人工校正边界。
 
 ## 三种证据状态
 

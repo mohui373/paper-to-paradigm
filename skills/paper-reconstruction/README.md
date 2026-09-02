@@ -84,15 +84,16 @@ R 路线提供脚本/Quarto、`renv` 与 `sessionInfo()`；Python 提供脚本/n
 ## 工作方式：从论文证据走到可执行复现包
 
 1. 确认论文版本、目标 Study 和概念/程序/统计/直接复制层级。
-2. 建立 DOI、正文、附录、Supplement、OSF、预注册、数据、代码和材料来源账本。
-3. 完成实现所需的最小论文解剖，查清理论、变量、原始反应、指标、模型和表图关系。
-4. 判断实验、问卷、纵向、互动或现场路线，建立参与者/受访者流程。
-5. 仅在需要实施时选择平台，分别给出原平台证据、目标平台原生组件和迁移差异。
-6. 仅在需要分析产物时选择分析环境；未选择则交付平台中立契约。
-7. 先在 C5 还原原文真实的分析路线；再连接来源/材料状态、最小数据字段和验证测试，避免以泛化材料包或日志表取代分析。
-8. 对 E-Prime bundle 或跨平台计划运行相应语义校验。
-9. 用户提出新想法时，区分原文、后续证据、用户构想与待验证部分。
-10. 按适用的 ABCDE 部分和最小充分产物交付，并说明真实运行状态。
+2. PDF 先建立导航索引：区分单篇论文与会议集/论文集中的各篇论文，并为每篇定位摘要、前言与理论、研究设计、结果与数据处理、讨论与文章价值；指定目标时精确选择，未指定时默认处理全部论文。
+3. 建立所选论文的 DOI、正文、附录、Supplement、OSF、预注册、数据、代码和材料来源账本。
+4. 完成实现所需的最小论文解剖，查清理论、变量、原始反应、指标、模型和表图关系。
+5. 判断实验、问卷、纵向、互动或现场路线，建立参与者/受访者流程。
+6. 仅在需要实施时选择平台，分别给出原平台证据、目标平台原生组件和迁移差异。
+7. 仅在需要分析产物时选择分析环境；未选择则交付平台中立契约。
+8. 先在 C5 还原原文真实的分析路线；再连接来源/材料状态、最小数据字段和验证测试，避免以泛化材料包或日志表取代分析。
+9. 对 E-Prime bundle 或跨平台计划运行相应语义校验。
+10. 用户提出新想法时，区分原文、后续证据、用户构想与待验证部分。
+11. 按适用的 ABCDE 部分和最小充分产物交付，并说明真实运行状态。完整索引只留在本地 `source_bundle.json`，报告中不展示。
 
 ## 可以这样发出“重组任务”
 
@@ -139,6 +140,7 @@ $paper-reconstruction 请重组这篇第三方惩罚实验到单机 PsychoPy。
 ## 运行和依赖：核心 Skill 轻量，目标环境按需准备
 
 - Skill 本身不要求 API key、MCP 或固定平台，也不会自动安装商业软件。
+- PDF 索引复用同一集合中 [`paper-anatomy` 的 `prepare_paper.py`](../paper-anatomy/scripts/prepare_paper.py)，需要 Python 3、`pypdf`，可选 `pdfplumber`；不维护第二份重复脚本。
 - Markdown、平台计划和 E-Prime bundle 校验器使用 Python 3 与标准库。
 - 目标程序和分析软件由用户自行合法准备；Skill 记录版本、依赖、运行日志和产物状态。
 - E-Prime 深度路径以 3.0 为目标；仓库不分发 PST 运行时或自带样例。
@@ -159,6 +161,7 @@ $paper-reconstruction 请重组这篇第三方惩罚实验到单机 PsychoPy。
 | [`eprime-execution-path.md`](references/eprime-execution-path.md) | E-Prime Proc/List、重复关系与运行状态 |
 | [`r-reproducibility-guide.md`](references/r-reproducibility-guide.md) | 只有选择 R 时读取 |
 | [`output-contract.md`](references/output-contract.md) | 完整 ABCDE 正式报告字段 |
+| [`paper-anatomy/prepare_paper.py`](../paper-anatomy/scripts/prepare_paper.py) | 单篇/论文集边界、五类章节和目标论文页码的共享索引器；索引仅作本地侧车 |
 | [`validate_output.py`](scripts/validate_output.py) | 校验正式 ABCDE Markdown 的结构与来源状态字段 |
 | [`validate_platform_plan.py`](scripts/validate_platform_plan.py) | 校验非 E-Prime 平台计划、问卷/纵向和分析字段 |
 | [`audit_replication_bundle.py`](scripts/audit_replication_bundle.py) | 校验 E-Prime Proc/List、日志、字典与分析语义 |

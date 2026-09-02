@@ -65,15 +65,16 @@ R receives scripts/Quarto, `renv`, and `sessionInfo()`; Python receives scripts/
 ## Workflow: from paper evidence to an executable package
 
 1. Confirm the paper version, target Study, and conceptual/program/statistical/direct-copy level.
-2. Build a DOI, article, appendix, Supplement, OSF, preregistration, data, code, and material ledger.
-3. Perform the minimum paper anatomy needed to connect theory, variables, raw responses, indices, models, and figures.
-4. Route experiments, surveys, longitudinal, interactive, and field studies to their actual participant/respondent flow.
-5. Select an implementation platform only when implementation is required; preserve original-platform evidence and migration differences.
-6. Select an analysis environment only when analysis artifacts are required; otherwise keep the contract platform-neutral.
-7. Reconstruct the paper's actual analysis route in C5 first; then connect source/material status, minimum data fields, and validation without replacing analysis with generic material packs or log tables.
-8. Run the E-Prime bundle auditor or cross-platform plan validator.
-9. Separate paper evidence, later evidence, user ideas, and untested decisions when extending a study.
-10. Deliver applicable ABCDE sections and minimum sufficient artifacts with an honest runtime state.
+2. Index every PDF first: separate a standalone paper from individual papers in proceedings or another collection, then locate each paper's abstract, introduction/theory, research design, results/analysis, and discussion/value. Select an explicitly requested paper precisely; if none is specified, process all detected papers by default.
+3. Build the selected paper's DOI, article, appendix, Supplement, OSF, preregistration, data, code, and material ledger.
+4. Perform the minimum paper anatomy needed to connect theory, variables, raw responses, indices, models, and figures.
+5. Route experiments, surveys, longitudinal, interactive, and field studies to their actual participant/respondent flow.
+6. Select an implementation platform only when implementation is required; preserve original-platform evidence and migration differences.
+7. Select an analysis environment only when analysis artifacts are required; otherwise keep the contract platform-neutral.
+8. Reconstruct the paper's actual analysis route in C5 first; then connect source/material status, minimum data fields, and validation without replacing analysis with generic material packs or log tables.
+9. Run the E-Prime bundle auditor or cross-platform plan validator.
+10. Separate paper evidence, later evidence, user ideas, and untested decisions when extending a study.
+11. Deliver applicable ABCDE sections and minimum sufficient artifacts with an honest runtime state. Keep the full index only in the local `source_bundle.json`, never in the report body.
 
 ## Typical requests
 
@@ -116,6 +117,7 @@ Missing material does not end the task. The Skill labels paper-explicit, supplem
 ## Runtime and dependencies
 
 - The core Skill requires no API key, MCP, fixed platform, or automatic commercial-software installation.
+- PDF indexing reuses [`paper-anatomy`'s `prepare_paper.py`](../paper-anatomy/scripts/prepare_paper.py) from the same collection. It requires Python 3 and `pypdf`, with optional `pdfplumber`; no duplicate indexer is maintained.
 - Markdown, platform-plan, and E-Prime bundle validators use Python 3 and the standard library.
 - Users lawfully provide target implementation and analysis environments; the Skill records versions, dependencies, logs, and runtime state.
 - The E-Prime deep path targets 3.0; the repository does not redistribute PST runtimes or installed samples.
@@ -136,6 +138,7 @@ Missing material does not end the task. The Skill labels paper-explicit, supplem
 | [`eprime-execution-path.md`](references/eprime-execution-path.md) | E-Prime Proc/List and runtime state |
 | [`r-reproducibility-guide.md`](references/r-reproducibility-guide.md) | loaded only for R |
 | [`output-contract.md`](references/output-contract.md) | full ABCDE fields |
+| [`paper-anatomy/prepare_paper.py`](../paper-anatomy/scripts/prepare_paper.py) | shared standalone/collection, five-part section, and target-page indexer; local sidecar only |
 | [`validate_output.py`](scripts/validate_output.py) | formal ABCDE Markdown structure and source-status validation |
 | [`validate_platform_plan.py`](scripts/validate_platform_plan.py) | cross-platform, longitudinal, and analysis validation |
 | [`audit_replication_bundle.py`](scripts/audit_replication_bundle.py) | E-Prime semantic audit |

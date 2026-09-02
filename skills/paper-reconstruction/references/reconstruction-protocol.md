@@ -15,6 +15,12 @@ Replication levels:
 | Statistical | Recreate exclusions, variables, models, contrasts, and figures from data |
 | Direct copy | Use original program, stimuli, settings, randomization, and analysis package |
 
+### PDF index gate
+
+For every PDF, run the shared `../paper-anatomy/scripts/prepare_paper.py` before reconstruction. Use `document_index` to separate a standalone paper from papers in proceedings or another collection, select the requested paper by ordinal, `paper_id`, DOI, or unique title phrase, and then locate its abstract, introduction/theory, research design, results/analysis, and discussion/value ranges. If the user does not specify a paper in a multi-paper document, process all detected papers by default. Never guess an ambiguous selection.
+
+Treat `source_bundle.json` as a local navigation sidecar, not a report section or replication deliverable. Bring only the selected page ranges into working context. In the ABCDE output, retain the selected-paper scope and compact page/figure/table pointers needed to support claims; do not paste `document_index`, page inventories, or page text.
+
 ## 2. A: Paper Reconstruction Target and Evidence
 
 Include: research question; theory; study map; bilingual variables; raw-response-to-index path; exclusions; statistical model; result/figure mapping; exact replication target.

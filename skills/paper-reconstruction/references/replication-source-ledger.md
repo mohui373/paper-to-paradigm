@@ -40,4 +40,6 @@
 
 ## 与 paper-anatomy 的衔接
 
-若已有 `paper-anatomy` 生成的 `source_bundle.json`，可复用其中 DOI、链接候选、页码、图表和材料范围；但候选链接仍需实际访问后才能改为 `已读取`。
+PDF 必须先复用 `paper-anatomy` 的 `prepare_paper.py` 建立 `source_bundle.json`。对会议集或论文集，先用 `document_index` 确认目标论文的标题、DOI 候选和起止页；用户未指定目标时默认处理全部论文，指定不唯一时不得猜测。
+
+来源账本可复用所选论文的 DOI、链接候选、页码、图表和材料范围，但候选链接仍需实际访问后才能改为 `已读取`。`source_bundle.json` 是本地导航侧车，不属于 ABCDE 正文：不要粘贴论文目录、五类章节索引或逐页文本，只在账本和分析中保留复现所需的目标范围与紧凑来源指针。
